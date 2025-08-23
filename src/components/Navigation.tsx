@@ -21,7 +21,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
+              <img 
+                src="/logo2.png" 
+                alt="St. Mary's Church Logo" 
+                className="h-12 w-auto"
+              />
               <div>
                 <h1 className="text-2xl font-bold text-blue-900">St. Mary's Church</h1>
                 <p className="text-sm text-gray-600">Maharagama</p>
