@@ -5,6 +5,10 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 ## 🚀 Features
 
 - **Modern Design**: Beautiful, responsive design with smooth animations
+- **Full-Screen Hero**: Immersive church background image with welcome message
+- **Two-Column Layout**: Church history and feature cards side by side
+- **Parish Priest Section**: Personal message with priest's photo
+- **Church Logo**: Branded navigation with church logo
 - **Mobile-First**: Fully responsive across all devices
 - **Fast Performance**: Built with Next.js for optimal performance
 - **SEO Optimized**: Proper metadata and structured content
@@ -24,11 +28,12 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 
 ## 📱 Sections
 
-1. **Hero Section**: Welcome message with call-to-action buttons
-2. **About Section**: Church history and parish priest message
-3. **Mass Schedules**: Weekly mass timings and languages
-4. **Contact Information**: Phone, address, and social media links
-5. **Footer**: Quick links and additional contact details
+1. **Hero Section**: Full-screen welcome message with church background image and call-to-action
+2. **About Our Church**: Comprehensive church history from 1940-1981 with feature cards
+3. **Parish Priest Message**: Personal welcome message with priest's photo
+4. **Mass Schedules**: Weekly mass timings and languages
+5. **Contact Information**: Phone, address, and social media links
+6. **Footer**: Quick links and additional contact details
 
 ## 🚀 Getting Started
 
@@ -70,20 +75,29 @@ npm run dev
 The website uses a blue and purple color scheme that can be customized in the Tailwind configuration.
 
 ### Content
-All content is easily editable in the `src/app/page.tsx` file.
+- **Home Page**: Main content in `src/app/page.tsx`
+- **Navigation**: Logo and menu in `src/components/Navigation.tsx`
+- **Images**: Static assets in `public/` folder
 
 ### Styling
 Custom styles are defined in `src/app/globals.css` using Tailwind's layer system.
 
+### Images
+- **Background**: `churchMaincomp.jpg` for hero section
+- **Logo**: `logo2.png` for navigation
+- **Priest Photo**: `priest-message.jpg` for parish priest section
+
 ## 📄 Content Structure
 
-The website includes all content from the original St. Mary's Church website:
+The website includes comprehensive content about St. Mary's Church:
 
-- **Church History**: Founded in 1981 by Rev. Fr. Francis Fernando
-- **Parish Priest**: Rev. Fr. Sudath Gunetilleke
+- **Church History**: Complete timeline from 1940-1981, including Fr. Dabrera, Fr. Raymen, and Fr. Fernando
+- **Parish Priest**: Rev. Fr. Sudath Gunetilleke with personal welcome message
+- **Church Background**: Beautiful church image as hero section background
+- **Feature Cards**: Worship, Our Invitation, and Education services
 - **Mass Schedules**: Sunday, weekday, and special masses
 - **Contact Information**: Phone, address, and office hours
-- **Services**: Worship, education, and community programs
+- **Branding**: Church logo in navigation bar
 
 ## 🌐 Deployment
 
