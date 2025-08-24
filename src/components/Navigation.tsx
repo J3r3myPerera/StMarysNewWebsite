@@ -17,7 +17,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-brown-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -28,8 +28,8 @@ export default function Navigation() {
                 className="h-12 w-auto"
               />
               <div>
-                <h1 className="text-2xl font-bold text-blue-900">St. Mary's Church</h1>
-                <p className="text-sm text-gray-600">Maharagama</p>
+                <h1 className="text-2xl font-bold text-blue-800">St. Mary's Church</h1>
+                <p className="text-sm text-brown-600">Maharagama</p>
               </div>
             </Link>
           </div>
@@ -43,8 +43,8 @@ export default function Navigation() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     pathname === item.href
-                      ? 'text-blue-900 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-900'
+                      ? 'text-blue-800 bg-gold-50'
+                      : 'text-gray-700 hover:text-blue-800'
                   }`}
                 >
                   {item.name}
@@ -57,7 +57,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-900"
+              className="text-gray-700 hover:text-blue-800"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -75,8 +75,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   pathname === item.href
-                    ? 'text-blue-900 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-900'
+                    ? 'text-blue-800 bg-gold-50'
+                    : 'text-gray-700 hover:text-blue-800'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
