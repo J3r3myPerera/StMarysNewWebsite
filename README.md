@@ -8,6 +8,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 - **Full-Screen Hero**: Immersive church background image with welcome message
 - **Two-Column Layout**: Church history and feature cards side by side
 - **Parish Priest Section**: Personal message with priest's photo
+- **Church Zones Page**: Complete list of 16 parish zones with coordinators
 - **Church Logo**: Branded navigation with church logo
 - **Mobile-First**: Fully responsive across all devices
 - **Fast Performance**: Built with Next.js for optimal performance
@@ -31,9 +32,10 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 1. **Hero Section**: Full-screen welcome message with church background image and call-to-action
 2. **About Our Church**: Comprehensive church history from 1940-1981 with feature cards
 3. **Parish Priest Message**: Personal welcome message with priest's photo
-4. **Mass Schedules**: Weekly mass timings and languages
-5. **Contact Information**: Phone, address, and social media links
-6. **Footer**: Quick links and additional contact details
+4. **Church Zones**: Parish organization with 16 zones and their coordinators
+5. **Mass Schedules**: Weekly mass timings and languages
+6. **Contact Information**: Phone, address, and social media links
+7. **Footer**: Quick links and additional contact details
 
 ## 🚀 Getting Started
 
@@ -76,7 +78,12 @@ The website uses a blue and purple color scheme that can be customized in the Ta
 
 ### Content
 - **Home Page**: Main content in `src/app/page.tsx`
+- **About Page**: Church history and information in `src/app/about/page.tsx`
+- **Church Zones Page**: Parish zones and coordinators in `src/app/church-zones/page.tsx`
+- **Mass Schedules Page**: Weekly mass timings in `src/app/mass-schedules/page.tsx`
+- **Contact Page**: Contact information and form in `src/app/contact/page.tsx`
 - **Navigation**: Logo and menu in `src/components/Navigation.tsx`
+- **Footer**: Footer component in `src/components/Footer.tsx`
 - **Images**: Static assets in `public/` folder
 
 ### Styling
@@ -95,8 +102,9 @@ The website includes comprehensive content about St. Mary's Church:
 - **Parish Priest**: Rev. Fr. Sudath Gunetilleke with personal welcome message
 - **Church Background**: Beautiful church image as hero section background
 - **Feature Cards**: Worship, Our Invitation, and Education services
+- **Church Zones**: 16 parish zones with coordinators for better community organization (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
 - **Mass Schedules**: Sunday, weekday, and special masses
-- **Contact Information**: Phone, address, and office hours
+- **Contact Information**: Phone, address, office hours, and social media links (Facebook only)
 - **Branding**: Church logo in navigation bar
 
 ## 🌐 Deployment
@@ -125,6 +133,15 @@ For questions about the website or church information:
 - **Phone**: +94 112843561
 - **Address**: St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
 - **Email**: info@stmarysmaharagama.org
+- **Social Media**: Facebook (Instagram links removed)
+
+## 🔄 Recent Updates
+
+### Latest Changes
+- ✅ **New Church Zones Page**: Added dedicated page showcasing all 16 parish zones with their coordinators
+- ✅ **Navigation Updates**: Added "Church Zones" link to main navigation menu
+- ✅ **Social Media Cleanup**: Removed all Instagram links and logos from Contact page and Footer
+- ✅ **Enhanced Organization**: Better structure for parish community engagement information
 
 ## 📄 License
 

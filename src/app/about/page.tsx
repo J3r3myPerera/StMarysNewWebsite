@@ -82,7 +82,7 @@ export default function About() {
                   Join us in prayer, worship, and community as we journey together in faith.
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
-                  May Our Lady of the Assumption continue to intercede for our parish community, and may you find in this website—and in our parish—a source of inspiration, information, and spiritual nourishment.
+                  May Our Lady of the Assumption continue to intercede for our parish community, and may you find in this website and in our parish a source of inspiration, information, and spiritual nourishment.
                 </p>
                 <p className="text-lg leading-relaxed mb-4">
                   I look forward to meeting you personally and welcoming you to our parish family.

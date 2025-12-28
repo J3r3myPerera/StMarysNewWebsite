@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Mail, Facebook, Instagram } from 'lucide-react';
+import { Phone, MapPin, Clock, Mail, Facebook } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -110,10 +110,6 @@ export default function Contact() {
                 <a href="#" className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors">
                   <Facebook className="w-6 h-6" />
                   <span>Follow us on Facebook</span>
-                </a>
-                <a href="#" className="flex items-center space-x-3 p-3 bg-pink-600 rounded-lg text-white hover:bg-pink-700 transition-colors">
-                  <Instagram className="w-6 h-6" />
-                  <span>Follow us on Instagram</span>
                 </a>
               </div>
             </motion.div>

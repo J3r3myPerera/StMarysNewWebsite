@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Mail } from 'lucide-react';
+import { Facebook, Mail } from 'lucide-react';
 
 export default function Footer() {
   const navItems = [
@@ -40,9 +40,6 @@ export default function Footer() {
             <div className="flex space-x-4 mt-4">
               <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
-                <Instagram className="w-5 h-5" />
               </a>
               <a href="mailto:info@stmarysmaharagama.org" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-700 transition-colors">
                 <Mail className="w-5 h-5" />

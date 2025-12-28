@@ -12,6 +12,7 @@ export default function Navigation() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Church Zones', href: '/church-zones' },
     { name: 'Mass Schedules', href: '/mass-schedules' },
     { name: 'Contact', href: '/contact' },
   ];
