@@ -20,13 +20,13 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Welcome to St. Mary's Church
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gold-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
               A place of faith, community, and spiritual growth in Maharagama
             </p>
             <div className="flex justify-center">
               <Link
                 href="/mass-schedules"
-                className="bg-gold-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gold-600 transition-colors"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Mass Schedules
               </Link>
@@ -36,7 +36,7 @@ export default function Home() {
       </section>
 
       {/* Quick Info Section */}
-      <section className="py-20 bg-brown-50">
+      <section className="py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <motion.div
@@ -70,7 +70,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center p-6 rounded-lg bg-white shadow-md"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-blue-800 mb-2">Worship</h3>
@@ -84,7 +84,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center p-6 rounded-lg bg-white shadow-md"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-blue-800 mb-2">Our Invitation</h3>
@@ -98,7 +98,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center p-6 rounded-lg bg-white shadow-md"
             >
-              <div className="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-blue-800 mb-2">Education</h3>
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Parish Priest Message Section */}
-      <section className="py-20 bg-brown-100">
+      <section className="py-20 bg-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-6xl mx-auto"
           >
-            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 border border-brown-200">
+            <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 border border-blue-200">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="prose prose-lg text-gray-700 leading-relaxed">
                 <p className="mb-6">
@@ -159,7 +159,7 @@ export default function Home() {
                 In Christ's love and Mary's care,<br />
                   Rev. Fr. Sudath Gunetilleke<br />
                   Parish Priest<br />
-                  Our Lady of the Assumption Parish, <br />
+                  St. Mary's Parish, <br />
                   Maharagama
                 </p>
               </div>

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-900 to-purple-900 text-white rounded-2xl p-8 md:p-12"
+            className="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl p-8 md:p-12"
           >
             <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Parish Priest Message</h3>
@@ -89,74 +89,13 @@ export default function About() {
                 </p>
                 <div className="mt-8">
                   <p className="text-lg font-semibold">In Christ's love and Mary's care,</p>
-                  <p className="text-xl font-bold mt-2">Rev. Fr. Sudath Gunetilleke</p>
+                  <p className="text-xl font-bold mt-4">Rev. Fr. Sudath Gunetilleke</p>
                   <p className="text-lg mt-1">Parish Priest</p>
-                  <p className="text-lg mt-1">Our Lady of the Assumption Parish, Maharagama</p>
+                  <p className="text-lg mt-1">St. Mary's Parish, Maharagama</p>
                 </div>
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Our Services */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services & Programs
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We offer various spiritual and educational programs to serve our community
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-lg p-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Worship Services</h3>
-              <p className="text-gray-600">
-                Regular Mass services and special liturgical celebrations throughout the week, including Sunday Masses in both Sinhala and English.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-lg p-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Religious Education</h3>
-              <p className="text-gray-600">
-                Weekly Sunday school both in Sinhala and English medium with regular Religious education programs conducted for all ages.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-lg p-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Fellowship</h3>
-              <p className="text-gray-600">
-                Various community activities, prayer groups, and social events that bring our parish family together in faith and friendship.
-              </p>
-            </motion.div>
-          </div>
         </div>
       </section>
     </div>

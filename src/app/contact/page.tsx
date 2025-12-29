@@ -1,13 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Mail, Facebook } from 'lucide-react';
+import { Phone, MapPin, Clock, Facebook, Youtube } from 'lucide-react';
 
 export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,17 +81,6 @@ export default function Contact() {
                     <p className="text-sm text-gray-500">Closed on Sundays (except for Mass)</p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Email</p>
-                    <a href="mailto:info@stmarysmaharagama.org" className="text-blue-600 hover:text-blue-800">
-                      info@stmarysmaharagama.org
-                    </a>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -107,9 +96,23 @@ export default function Contact() {
                 Connect with us on social media for updates, announcements, and community news.
               </p>
               <div className="space-y-4">
-                <a href="#" className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors">
+                <a 
+                  href="https://web.facebook.com/profile.php?id=61577346539650" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors"
+                >
                   <Facebook className="w-6 h-6" />
                   <span>Follow us on Facebook</span>
+                </a>
+                <a 
+                  href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 p-3 bg-red-600 rounded-lg text-white hover:bg-red-700 transition-colors"
+                >
+                  <Youtube className="w-6 h-6" />
+                  <span>Subscribe on YouTube</span>
                 </a>
               </div>
             </motion.div>
@@ -140,16 +143,36 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg p-8"
+            className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
-            <div className="aspect-w-16 aspect-h-9 rounded-lg bg-gray-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 mb-2">Interactive Map Coming Soon</p>
-                <p className="text-sm text-gray-500">
+            <div className="w-full h-[450px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=St.+Mary's+Church,+Church+Gardens,+Mahamegawatte,+Maharagama,+Sri+Lanka&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="St. Mary's Church Maharagama Location"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+            <div className="p-4 bg-gray-50 flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+                <p className="text-gray-700">
                   St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
                 </p>
               </div>
+              <a
+                href="https://www.google.com/maps/search/St.+Mary's+Church+Maharagama+Sri+Lanka"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </motion.div>
         </div>
@@ -181,7 +204,7 @@ export default function Contact() {
                 </ul>
               </div>
 
-              <div className="bg-purple-50 rounded-lg p-6">
+              <div className="bg-blue-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Getting Here</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Located in Maharagama, easily accessible by bus</li>
@@ -197,12 +220,9 @@ export default function Contact() {
               <p className="text-lg text-gray-600 mb-4">
                 We look forward to welcoming you to our parish family. If you have any questions or need assistance, please don't hesitate to contact us.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <a href="tel:+94112843561" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Call Us Now
-                </a>
-                <a href="mailto:info@stmarysmaharagama.org" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  Send Email
                 </a>
               </div>
             </div>

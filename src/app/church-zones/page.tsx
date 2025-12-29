@@ -26,7 +26,7 @@ export default function ChurchZones() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,26 +44,6 @@ export default function ChurchZones() {
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Parish Zones
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              St. Mary's Church parish is organized into different zones to facilitate better community engagement, pastoral care, and parish activities. Each zone has its own coordinator and community leaders.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Zones Table Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +56,7 @@ export default function ChurchZones() {
           >
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gradient-to-r from-blue-900 to-purple-900">
+                <thead className="bg-gradient-to-r from-blue-900 to-blue-700">
                   <tr>
                     <th scope="col" className="px-6 py-4 text-left text-xs font-semibold text-white uppercase tracking-wider">
                       Zone
@@ -104,7 +84,7 @@ export default function ChurchZones() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
-                          <Users className="w-5 h-5 text-purple-600 mr-2" />
+                          <Users className="w-5 h-5 text-blue-600 mr-2" />
                           <span className="text-sm text-gray-700">{item.coordinator}</span>
                         </div>
                       </td>
@@ -127,7 +107,7 @@ export default function ChurchZones() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 border border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
               <div className="flex items-center mb-6">
                 <Phone className="w-8 h-8 text-blue-600 mr-4" />
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -177,7 +157,7 @@ export default function ChurchZones() {
               viewport={{ once: true }}
               className="bg-white rounded-lg shadow-md p-6 text-center"
             >
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">

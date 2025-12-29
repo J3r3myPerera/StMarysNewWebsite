@@ -27,15 +27,30 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 - **UI Components**: Headless UI
 - **Font**: Inter (Google Fonts)
 
-## 📱 Sections
+## 📱 Pages & Sections
 
-1. **Hero Section**: Full-screen welcome message with church background image and call-to-action
-2. **About Our Church**: Comprehensive church history from 1940-1981 with feature cards
-3. **Parish Priest Message**: Personal welcome message with priest's photo
-4. **Church Zones**: Parish organization with 16 zones and their coordinators
-5. **Mass Schedules**: Weekly mass timings and languages
-6. **Contact Information**: Phone, address, and social media links
-7. **Footer**: Quick links and additional contact details
+1. **Home Page**:
+   - Hero Section: Full-screen welcome message with church background image and call-to-action
+   - About Our Church: Comprehensive church history from 1940-1981 with feature cards
+   - Parish Priest Message: Personal welcome message with priest's photo
+
+2. **About Page**: Church history and parish priest message
+
+3. **Mass Schedules Page**: Detailed weekly mass schedules including:
+   - Weekday Schedule (Tuesday-Friday with specific locations)
+   - Weekend Masses (Saturday and Sunday in multiple languages)
+   - Special Services (New Year Mass, Eucharistic Adoration, Holy Days, Praise and Worship, Novenas)
+   - Important Information (Dress Code, Parish Priest Office Hours, Parking)
+
+4. **Church Zones Page**: Complete list of 16 parish zones with coordinators
+
+5. **Contact Page**: 
+   - Contact Information (Phone, Address, Office Hours)
+   - Social Media Links (Facebook and YouTube)
+   - Interactive Google Maps for location
+   - Visitor Information
+
+6. **Footer**: Quick links and social media icons
 
 ## 🚀 Getting Started
 
@@ -74,7 +89,7 @@ npm run dev
 ## 🎨 Customization
 
 ### Colors
-The website uses a blue and purple color scheme that can be customized in the Tailwind configuration.
+The website uses a cohesive blue color scheme throughout, with shades ranging from light blue (blue-50) to dark blue (blue-900), creating a professional and harmonious design. Colors can be customized in the Tailwind configuration.
 
 ### Content
 - **Home Page**: Main content in `src/app/page.tsx`
@@ -103,8 +118,9 @@ The website includes comprehensive content about St. Mary's Church:
 - **Church Background**: Beautiful church image as hero section background
 - **Feature Cards**: Worship, Our Invitation, and Education services
 - **Church Zones**: 16 parish zones with coordinators for better community organization (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
-- **Mass Schedules**: Sunday, weekday, and special masses
-- **Contact Information**: Phone, address, office hours, and social media links (Facebook only)
+- **Mass Schedules**: Comprehensive schedule including weekday masses, weekend masses, special services, and important information
+- **Contact Information**: Phone, address, office hours, and social media links (Facebook and YouTube)
+- **Interactive Map**: Google Maps integration for easy navigation to the church
 - **Branding**: Church logo in navigation bar
 
 ## 🌐 Deployment
@@ -132,15 +148,27 @@ For questions about the website or church information:
 
 - **Phone**: +94 112843561
 - **Address**: St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
-- **Email**: info@stmarysmaharagama.org
-- **Social Media**: Facebook (Instagram links removed)
+- **Social Media**: 
+  - **Facebook**: [St. Mary's Church Maharagama](https://web.facebook.com/profile.php?id=61577346539650)
+  - **YouTube**: [St. Mary's Church Maharagama](https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1)
 
 ## 🔄 Recent Updates
 
 ### Latest Changes
 - ✅ **New Church Zones Page**: Added dedicated page showcasing all 16 parish zones with their coordinators
-- ✅ **Navigation Updates**: Added "Church Zones" link to main navigation menu
-- ✅ **Social Media Cleanup**: Removed all Instagram links and logos from Contact page and Footer
+- ✅ **Navigation Updates**: Updated navigation menu order (Mass Schedules before Church Zones) with improved active page highlighting
+- ✅ **Social Media Updates**: 
+  - Added YouTube link to Contact page and Footer
+  - Updated Facebook links to official profile
+  - Removed all Instagram links and logos
+  - Removed email contact information
+- ✅ **Mass Schedules Page**: Complete redesign with detailed weekday/weekend schedules, special services, and important information
+- ✅ **Contact Page Enhancements**: 
+  - Added interactive Google Maps with church location
+  - Updated social media section with Facebook and YouTube
+  - Removed email contact information
+- ✅ **About Page**: Removed "Our Services & Programs" section for cleaner layout
+- ✅ **Color Scheme**: Unified design using shades of blue throughout (removed gold, purple, and brown accents)
 - ✅ **Enhanced Organization**: Better structure for parish community engagement information
 
 ## 📄 License

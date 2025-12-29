@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Mail } from 'lucide-react';
+import { Facebook, Youtube } from 'lucide-react';
 
 export default function Footer() {
   const navItems = [
@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">St. Mary's Church</h3>
             <p className="text-gray-300">
-              Our Lady of the Assumption Parish, Maharagama, Sri Lanka
+              St. Mary's Parish, Maharagama, Sri Lanka
             </p>
           </div>
           <div>
@@ -38,11 +38,11 @@ export default function Footer() {
               Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
             </p>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+              <a href="https://web.facebook.com/profile.php?id=61577346539650" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="mailto:info@stmarysmaharagama.org" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-700 transition-colors">
-                <Mail className="w-5 h-5" />
+              <a href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors">
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>

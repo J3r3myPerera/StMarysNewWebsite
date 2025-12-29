@@ -9,16 +9,24 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Helper function to check if current path matches nav item
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname === href || pathname === `${href}/` || pathname.startsWith(`${href}/`);
+  };
+
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Church Zones', href: '/church-zones' },
     { name: 'Mass Schedules', href: '/mass-schedules' },
+    { name: 'Church Zones', href: '/church-zones' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-brown-200">
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-blue-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -30,7 +38,7 @@ export default function Navigation() {
               />
               <div>
                 <h1 className="text-2xl font-bold text-blue-800">St. Mary's Church</h1>
-                <p className="text-sm text-brown-600">Maharagama</p>
+                <p className="text-sm text-blue-600">Maharagama</p>
               </div>
             </Link>
           </div>
@@ -43,8 +51,8 @@ export default function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    pathname === item.href
-                      ? 'text-blue-800 bg-gold-50'
+                    isActive(item.href)
+                      ? 'text-blue-800 bg-blue-100'
                       : 'text-gray-700 hover:text-blue-800'
                   }`}
                 >
@@ -75,8 +83,8 @@ export default function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === item.href
-                    ? 'text-blue-800 bg-gold-50'
+                  isActive(item.href)
+                    ? 'text-blue-800 bg-blue-100'
                     : 'text-gray-700 hover:text-blue-800'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
