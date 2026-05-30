@@ -1,55 +1,136 @@
 import Link from 'next/link';
-import { Facebook, Youtube } from 'lucide-react';
+import { Facebook, Youtube, Phone, MapPin, Clock } from 'lucide-react';
+
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Mass Schedules', href: '/mass-schedules' },
+  { name: 'Church Zones', href: '/church-zones' },
+  { name: 'Events Gallery', href: '/events' },
+  { name: 'Contact', href: '/contact' },
+];
 
 export default function Footer() {
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Mass Schedules', href: '/mass-schedules' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">St. Mary's Church</h3>
-            <p className="text-gray-300">
-              St. Mary's Parish, Maharagama, Sri Lanka
+    <footer className="bg-gray-950 text-white">
+      {/* Amber accent bar */}
+      <div className="h-1 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo2.png" alt="St. Mary's Church Logo" className="h-12 w-auto opacity-90" />
+              <div>
+                <p className="text-white font-bold text-lg leading-tight">St. Mary&apos;s Church</p>
+                <p className="text-gray-400 text-xs">Maharagama, Sri Lanka</p>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mt-3">
+              Our Lady of the Assumption Parish, serving the Maharagama community since 1940.
             </p>
+            {/* Social icons */}
+            <div className="flex gap-3 mt-5">
+              <a
+                href="https://web.facebook.com/profile.php?id=61577346539650"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-blue-700 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-red-700 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
+            </div>
           </div>
+
+          {/* Quick links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {navItems.map((item) => (
+            <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-widest mb-5">Quick Links</h4>
+            <ul className="space-y-3">
+              {navLinks.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-300 hover:text-white transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-amber-400 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1 h-1 bg-gray-600 rounded-full group-hover:bg-amber-400 transition-colors" />
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Mass times quick ref */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300 mb-2">+94 112843561</p>
-            <p className="text-gray-300">
-              Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
-            </p>
-            <div className="flex space-x-4 mt-4">
-              <a href="https://web.facebook.com/profile.php?id=61577346539650" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
+            <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-widest mb-5">Weekend Masses</h4>
+            <ul className="space-y-3 text-sm">
+              {[
+                { day: 'Saturday', time: '7:30 AM', lang: 'Sinhala' },
+                { day: 'Saturday', time: '6:00 PM', lang: 'English (Vigil)' },
+                { day: 'Sunday', time: '7:30 AM', lang: 'Sinhala' },
+                { day: 'Sunday', time: '5:30 PM', lang: 'Bilingual' },
+              ].map((m) => (
+                <li key={m.day + m.time} className="flex items-center justify-between gap-4">
+                  <span className="text-gray-400">{m.day} · {m.lang}</span>
+                  <span className="text-amber-400 font-semibold tabular-nums">{m.time}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-widest mb-5">Contact</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                <a href="tel:+94112843561" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  +94 112843561
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                <p className="text-gray-400 text-sm">
+                  Church Garden&apos;s, Mahamegawatte,<br />Maharagama, Sri Lanka
+                </p>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                <p className="text-gray-400 text-sm">
+                  Mon – Fri: 8 AM – 5 PM<br />Sat: 8 AM – 12 PM
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-300">
-            © 2025 St. Mary's Church Maharagama. All rights reserved.
+
+        {/* Bottom bar */}
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-gray-500 text-sm">
+            © 2026 St. Mary&apos;s Church Maharagama. All rights reserved.
+          </p>
+          <p className="text-gray-600 text-xs">
+            Built voluntarily by{' '}
+            <a
+              href="https://personal-webiste-pi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-amber-400 transition-colors underline underline-offset-2"
+            >
+              Jeremy Perera
+            </a>
+            .
           </p>
         </div>
       </div>

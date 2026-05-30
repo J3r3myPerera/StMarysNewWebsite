@@ -1,20 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === '/';
 
-  // Helper function to check if current path matches nav item
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
-    }
-    return pathname === href || pathname === `${href}/` || pathname.startsWith(`${href}/`);
+    if (href === '/') return pathname === '/';
+    return pathname === href || pathname.startsWith(`${href}/`);
   };
 
   const navItems = [
@@ -22,79 +29,120 @@ export default function Navigation() {
     { name: 'About', href: '/about' },
     { name: 'Mass Schedules', href: '/mass-schedules' },
     { name: 'Church Zones', href: '/church-zones' },
+    { name: 'Events Gallery', href: '/events' },
     { name: 'Contact', href: '/contact' },
   ];
 
+  const transparent = isHome && !scrolled;
+
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-blue-200">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        transparent
+          ? 'bg-transparent border-transparent'
+          : 'bg-white/95 backdrop-blur-md shadow-md border-b border-blue-100'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
-              <img 
-                src="/logo2.png" 
-                alt="St. Mary's Church Logo" 
-                className="h-12 w-auto"
-              />
-              <div>
-                <h1 className="text-2xl font-bold text-blue-800">St. Mary's Church</h1>
-                <p className="text-sm text-blue-600">Maharagama</p>
-              </div>
-            </Link>
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
+            <img
+              src="/logo2.png"
+              alt="St. Mary's Church Logo"
+              className="h-12 w-auto"
+            />
+            <div>
+              <h1
+                className={`text-xl font-bold leading-tight transition-colors duration-300 ${
+                  transparent ? 'text-white' : 'text-blue-800'
+                }`}
+              >
+                St. Mary&apos;s Church
+              </h1>
+              <p
+                className={`text-xs tracking-wide transition-colors duration-300 ${
+                  transparent ? 'text-blue-100' : 'text-blue-500'
+                }`}
+              >
+                Maharagama
+              </p>
+            </div>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  isActive(item.href)
+                    ? transparent
+                      ? 'text-white'
+                      : 'text-blue-800 bg-blue-50'
+                    : transparent
+                    ? 'text-blue-100 hover:text-white hover:bg-white/10'
+                    : 'text-gray-600 hover:text-blue-800 hover:bg-blue-50'
+                }`}
+              >
+                {item.name}
+                {isActive(item.href) && (
+                  <motion.span
+                    layoutId="nav-active-bar"
+                    className={`absolute bottom-0.5 left-4 right-4 h-0.5 rounded-full ${
+                      transparent ? 'bg-amber-400' : 'bg-blue-600'
+                    }`}
+                  />
+                )}
+              </Link>
+            ))}
           </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              transparent
+                ? 'text-white hover:bg-white/10'
+                : 'text-gray-700 hover:bg-blue-50'
+            }`}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            className="md:hidden overflow-hidden bg-white border-t border-blue-100 shadow-lg"
+          >
+            <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-blue-800 bg-blue-100'
-                      : 'text-gray-700 hover:text-blue-800'
+                      ? 'text-blue-800 bg-blue-50 border-l-2 border-blue-700'
+                      : 'text-gray-700 hover:text-blue-800 hover:bg-blue-50'
                   }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-800"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive(item.href)
-                    ? 'text-blue-800 bg-blue-100'
-                    : 'text-gray-700 hover:text-blue-800'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

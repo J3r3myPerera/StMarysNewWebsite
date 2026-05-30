@@ -1,118 +1,146 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Facebook, Youtube } from 'lucide-react';
+import { Phone, MapPin, Clock, Facebook, Youtube, ExternalLink } from 'lucide-react';
+
+const contactCards = [
+  {
+    icon: Phone,
+    label: 'Phone',
+    value: '+94 112843561',
+    sub: 'Call us during office hours',
+    href: 'tel:+94112843561',
+  },
+  {
+    icon: MapPin,
+    label: 'Address',
+    value: "St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama",
+    sub: 'Sri Lanka',
+    href: null,
+  },
+  {
+    icon: Clock,
+    label: 'Office Hours',
+    value: 'Mon – Fri: 8:00 AM – 5:00 PM',
+    sub: 'Sat: 8:00 AM – 12:00 PM · Closed Sun (except Mass)',
+    href: null,
+  },
+];
 
 export default function Contact() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Get in touch with us or visit our church. We'd love to hear from you!
+      {/* ── Hero ── */}
+      <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              St. Mary&apos;s Church, Church Garden&apos;s, Mahamegawatte, Maharagama
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20 bg-white">
+      {/* ── Contact Cards + Social ── */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
-            </h2>
-            <p className="text-lg text-gray-600">
-              We're here to help and answer any questions you may have
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact info */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">St. Mary's Church</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Phone</p>
-                    <p className="text-gray-600">+94 112843561</p>
-                    <p className="text-sm text-gray-500">Call us during office hours</p>
+              <h2 className="text-4xl font-bold text-blue-900 mb-8">St. Mary&apos;s Church</h2>
+
+              <div className="space-y-5">
+                {contactCards.map(({ icon: Icon, label, value, sub, href }) => (
+                  <div
+                    key={label}
+                    className="flex items-start gap-5 p-5 rounded-2xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="w-11 h-11 bg-gradient-to-br from-blue-700 to-blue-900 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">{label}</p>
+                      {href ? (
+                        <a href={href} className="text-blue-900 font-semibold hover:text-blue-600 transition-colors">
+                          {value}
+                        </a>
+                      ) : (
+                        <p className="text-blue-900 font-semibold">{value}</p>
+                      )}
+                      <p className="text-gray-500 text-sm mt-0.5">{sub}</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Address</p>
-                    <p className="text-gray-600">
-                      St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
-                    </p>
-                    <p className="text-sm text-gray-500">Located in the heart of Maharagama</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Office Hours</p>
-                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Saturday: 8:00 AM - 12:00 PM</p>
-                    <p className="text-sm text-gray-500">Closed on Sundays (except for Mass)</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </motion.div>
 
+            {/* Social + CTA */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-lg p-8"
+              className="flex flex-col gap-6"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
-              <p className="text-gray-600 mb-6">
-                Connect with us on social media for updates, announcements, and community news.
-              </p>
-              <div className="space-y-4">
-                <a 
-                  href="https://web.facebook.com/profile.php?id=61577346539650" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors"
+              {/* Social media card */}
+              <div className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex-1">
+                <h3 className="text-2xl font-bold text-blue-900 mb-6">Follow Us</h3>
+
+                <div className="space-y-3">
+                  <a
+                    href="https://web.facebook.com/profile.php?id=61577346539650"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-blue-700 hover:bg-blue-800 rounded-2xl text-white transition-colors group"
+                  >
+                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Facebook className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm">Follow on Facebook</p>
+                      <p className="text-blue-200 text-xs">St. Mary&apos;s Church Maharagama</p>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-blue-300 group-hover:text-white transition-colors" />
+                  </a>
+
+                  <a
+                    href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-red-600 hover:bg-red-700 rounded-2xl text-white transition-colors group"
+                  >
+                    <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Youtube className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-sm">Subscribe on YouTube</p>
+                      <p className="text-red-200 text-xs">@st.maryschurchmaharagama</p>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-red-300 group-hover:text-white transition-colors" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Call CTA */}
+              <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-3xl p-7 text-white text-center">
+                <Phone className="w-8 h-8 text-amber-400 mx-auto mb-3" />
+                <p className="text-blue-200 text-sm mb-1">Questions? Give us a call</p>
+                <p className="text-2xl font-bold mb-4">+94 112843561</p>
+                <a
+                  href="tel:+94112843561"
+                  className="inline-block bg-amber-400 text-blue-950 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-amber-300 transition-colors"
                 >
-                  <Facebook className="w-6 h-6" />
-                  <span>Follow us on Facebook</span>
-                </a>
-                <a 
-                  href="https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 p-3 bg-red-600 rounded-lg text-white hover:bg-red-700 transition-colors"
-                >
-                  <Youtube className="w-6 h-6" />
-                  <span>Subscribe on YouTube</span>
+                  Call Us Now
                 </a>
               </div>
             </motion.div>
@@ -120,22 +148,18 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      {/* ── Map ── */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Find Us
-            </h2>
-            <p className="text-lg text-gray-600">
-              Visit our church located in the beautiful area of Maharagama
-            </p>
+            <h2 className="text-4xl font-bold text-blue-900">Find Us</h2>
+            <p className="text-gray-500 mt-3">Church Garden&apos;s, Mahamegawatte, Maharagama, Sri Lanka</p>
           </motion.div>
 
           <motion.div
@@ -143,9 +167,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
+            className="rounded-3xl overflow-hidden shadow-xl border border-gray-100"
           >
-            <div className="w-full h-[450px] rounded-lg overflow-hidden">
+            <div className="w-full h-[450px]">
               <iframe
                 src="https://www.google.com/maps?q=St.+Mary's+Church,+Church+Gardens,+Mahamegawatte,+Maharagama,+Sri+Lanka&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -155,22 +179,22 @@ export default function Contact() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="St. Mary's Church Maharagama Location"
-                className="rounded-lg"
-              ></iframe>
+              />
             </div>
-            <div className="p-4 bg-gray-50 flex items-center justify-between flex-wrap gap-4">
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                <p className="text-gray-700">
-                  St. Mary's Church, Church Garden's, Mahamegawatte, Maharagama, Sri Lanka
+            <div className="p-5 bg-white flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <p className="text-gray-700 text-sm">
+                  St. Mary&apos;s Church, Church Garden&apos;s, Mahamegawatte, Maharagama, Sri Lanka
                 </p>
               </div>
               <a
                 href="https://www.google.com/maps/search/St.+Mary's+Church+Maharagama+Sri+Lanka"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="flex items-center gap-1.5 bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-800 transition-colors"
               >
+                <ExternalLink className="w-3.5 h-3.5" />
                 Open in Google Maps
               </a>
             </div>
@@ -178,55 +202,63 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Additional Information */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Visiting Info ── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Visiting Our Church
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">For First-Time Visitors</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• All are welcome regardless of faith background</li>
-                  <li>• Modest, respectful dress is appreciated</li>
-                  <li>• Please arrive 10-15 minutes before Mass</li>
-                  <li>• Feel free to ask questions after Mass</li>
-                  <li>• Children are welcome at all services</li>
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Getting Here</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Located in Maharagama, easily accessible by bus</li>
-                  <li>• Parking available on church premises</li>
-                  <li>• Wheelchair accessible entrance</li>
-                  <li>• Public transportation nearby</li>
-                  <li>• Clear signage from main roads</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center">
-              <p className="text-lg text-gray-600 mb-4">
-                We look forward to welcoming you to our parish family. If you have any questions or need assistance, please don't hesitate to contact us.
-              </p>
-              <div className="flex justify-center">
-                <a href="tel:+94112843561" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                  Call Us Now
-                </a>
-              </div>
-            </div>
+            <h2 className="text-4xl font-bold text-blue-900">Visiting Our Church</h2>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'For First-Time Visitors',
+                items: [
+                  'All are welcome regardless of faith background',
+                  'Modest, respectful dress is appreciated',
+                  'Please arrive 10–15 minutes before Mass',
+                  'Feel free to ask questions after Mass',
+                  'Children are welcome at all services',
+                ],
+              },
+              {
+                title: 'Getting Here',
+                items: [
+                  'Located in Maharagama, easily accessible by bus',
+                  'Parking available on church premises',
+                  'Wheelchair accessible entrance',
+                  'Public transportation nearby',
+                  'Clear signage from main roads',
+                ],
+              },
+            ].map(({ title, items }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="bg-blue-50 border border-blue-100 rounded-2xl p-6"
+              >
+                <h3 className="text-lg font-bold text-blue-900 mb-4">{title}</h3>
+                <ul className="space-y-2.5">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-gray-700 text-sm">
+                      <span className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-1.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </section>
     </div>
