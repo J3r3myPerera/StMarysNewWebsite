@@ -116,6 +116,7 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 - **Events Gallery Page**: `src/app/events/page.tsx`
 - **Navigation**: `src/components/Navigation.tsx`
 - **Footer**: `src/components/Footer.tsx`
+- **Shared Nav Links**: `src/lib/nav.ts` — single source of truth for navigation items used by both the nav bar and footer
 - **Global Styles**: `src/app/globals.css`
 - **Images**: Static assets in `public/`
 
@@ -140,20 +141,10 @@ To add a new event to the gallery, place the photos in `public/events/<folder-na
 
 ## Deployment
 
-### Vercel (Recommended)
-```bash
-npm run build
-vercel --prod
-```
+The site runs as a full Next.js application (server runtime, image optimisation enabled). It is hosted on **Vercel** at [stmarysmaharagama.org](https://stmarysmaharagama.org), connected to the `main` branch of this repository — every push to `main` triggers an automatic production deployment.
 
-### Netlify
-```bash
-npm run build
-# Deploy the 'out' directory
-```
-
-### Other Platforms
-The static export can be deployed to any hosting service.
+### Deploy to Vercel
+Import the GitHub repository at [vercel.com/new](https://vercel.com/new). Vercel auto-detects Next.js and no additional configuration is required.
 
 ## Contact
 
@@ -191,6 +182,8 @@ For questions about the website or church information:
 ### June 2026
 - **Favicon**: Replaced default Next.js/Vercel favicon with the St. Mary's church logo (`logo2.png`) in `src/app/icon.png`, `src/app/favicon.ico`, and metadata (`icons` field in `layout.tsx`)
 - **License**: Added proprietary `LICENSE` file — all rights reserved by Dinuka Perera & St. Mary's Church Maharagama
+- **Migrated hosting to Vercel**: Removed `output: 'export'` static-export constraint; site now runs as a full Next.js app with native image optimisation on Vercel's free Hobby tier. Custom domain `stmarysmaharagama.org` DNS updated from Firebase to Vercel.
+- **Code cleanup**: Removed ~90 narrating JSX comments, `note: null` padding fields in schedule data, redundant `Readonly<>` wrapper in `layout.tsx`, and a thin `openLightbox` one-liner wrapper in the events page. Extracted shared nav items to `src/lib/nav.ts` to eliminate the duplicate array that existed in both `Navigation.tsx` and `Footer.tsx`.
 
 ## License
 

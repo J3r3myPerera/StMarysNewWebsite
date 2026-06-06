@@ -53,10 +53,6 @@ export default function EventsPage() {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [lightbox, setLightbox] = useState<LightboxState>(null);
 
-  const openLightbox = (eventIdx: number, imgIdx: number) => {
-    setLightbox({ eventIdx, imgIdx });
-  };
-
   const closeLightbox = () => setLightbox(null);
 
   const lightboxPrev = () => {
@@ -73,7 +69,6 @@ export default function EventsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
@@ -89,7 +84,6 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* ── Event Albums ── */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-10">
@@ -102,20 +96,16 @@ export default function EventsPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden"
               >
-                {/* Album header — always visible */}
                 <div className="grid md:grid-cols-[280px_1fr] gap-0">
-                  {/* Cover image */}
                   <div className="relative h-56 md:h-auto overflow-hidden">
                     <img
                       src={`/events/${event.folder}/${event.cover}`}
                       alt={`${event.title} cover`}
                       className="w-full h-full object-cover"
                     />
-                    {/* Gradient overlay on cover */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 md:bg-gradient-to-b md:from-transparent md:to-black/30" />
                   </div>
 
-                  {/* Album info */}
                   <div className="p-8 flex flex-col justify-between">
                     <div>
                       <p className="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-2">
@@ -141,7 +131,6 @@ export default function EventsPage() {
                   </div>
                 </div>
 
-                {/* Expandable photo grid */}
                 <AnimatePresence>
                   {expanded === eventIdx && (
                     <motion.div
@@ -155,7 +144,7 @@ export default function EventsPage() {
                         {event.images.map((img, imgIdx) => (
                           <button
                             key={img}
-                            onClick={() => openLightbox(eventIdx, imgIdx)}
+                            onClick={() => setLightbox({ eventIdx, imgIdx })}
                             className="relative aspect-square overflow-hidden rounded-xl group focus:outline-none focus:ring-2 focus:ring-blue-600"
                           >
                             <img
@@ -177,7 +166,6 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* ── Lightbox ── */}
       <AnimatePresence>
         {lightbox && (
           <motion.div
@@ -188,7 +176,6 @@ export default function EventsPage() {
             className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
             onClick={closeLightbox}
           >
-            {/* Close */}
             <button
               className="absolute top-4 right-4 text-white/70 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
               onClick={closeLightbox}
@@ -197,12 +184,10 @@ export default function EventsPage() {
               <X className="w-6 h-6" />
             </button>
 
-            {/* Counter */}
             <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm tabular-nums">
               {lightbox.imgIdx + 1} / {events[lightbox.eventIdx].images.length}
             </div>
 
-            {/* Prev */}
             <button
               className="absolute left-3 md:left-6 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
               onClick={(e) => { e.stopPropagation(); lightboxPrev(); }}
@@ -211,7 +196,6 @@ export default function EventsPage() {
               <ChevronLeft className="w-6 h-6" />
             </button>
 
-            {/* Image */}
             <motion.img
               key={`${lightbox.eventIdx}-${lightbox.imgIdx}`}
               initial={{ opacity: 0, scale: 0.97 }}
@@ -224,7 +208,6 @@ export default function EventsPage() {
               onClick={(e) => e.stopPropagation()}
             />
 
-            {/* Next */}
             <button
               className="absolute right-3 md:right-6 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
               onClick={(e) => { e.stopPropagation(); lightboxNext(); }}
@@ -233,7 +216,6 @@ export default function EventsPage() {
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            {/* Event title at bottom */}
             <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/50 text-sm">
               {events[lightbox.eventIdx].title}
             </div>

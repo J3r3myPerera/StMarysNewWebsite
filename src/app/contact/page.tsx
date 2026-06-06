@@ -30,7 +30,6 @@ const contactCards = [
 export default function Contact() {
   return (
     <div className="min-h-screen">
-      {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
@@ -46,11 +45,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── Contact Cards + Social ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact info */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +81,6 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Social + CTA */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -92,7 +88,6 @@ export default function Contact() {
               viewport={{ once: true }}
               className="flex flex-col gap-6"
             >
-              {/* Social media card */}
               <div className="bg-gray-50 border border-gray-100 rounded-3xl p-8 flex-1">
                 <h3 className="text-2xl font-bold text-blue-900 mb-6">Follow Us</h3>
 
@@ -131,7 +126,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Call CTA */}
               <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-3xl p-7 text-white text-center">
                 <Phone className="w-8 h-8 text-amber-400 mx-auto mb-3" />
                 <p className="text-blue-200 text-sm mb-1">Questions? Give us a call</p>
@@ -148,7 +142,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── Map ── */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -202,7 +195,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ── Visiting Info ── */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div

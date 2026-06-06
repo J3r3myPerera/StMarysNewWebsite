@@ -43,7 +43,6 @@ const highlights = [
 export default function ChurchZones() {
   return (
     <div className="min-h-screen">
-      {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
@@ -64,7 +63,6 @@ export default function ChurchZones() {
         </div>
       </section>
 
-      {/* ── Zone Cards Grid ── */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -92,23 +90,19 @@ export default function ChurchZones() {
                 viewport={{ once: true }}
                 className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                {/* Coloured top strip */}
                 <div className="h-1.5 bg-gradient-to-r from-blue-700 to-blue-900" />
                 <div className="p-5">
-                  {/* Zone number badge */}
                   <div className="flex items-start justify-between mb-3">
                     <span className="text-xs font-bold text-blue-400 bg-blue-50 px-2 py-0.5 rounded-md">
                       Zone {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  {/* Zone name */}
                   <div className="flex items-center gap-2 mb-3">
                     <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0" />
                     <h3 className="font-bold text-blue-900 text-base leading-tight">{item.zone}</h3>
                   </div>
 
-                  {/* Divider */}
                   <div className="border-t border-gray-100 pt-3">
                     <div className="flex items-center gap-2">
                       <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -127,7 +121,6 @@ export default function ChurchZones() {
         </div>
       </section>
 
-      {/* ── Secretary Contact ── */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -148,7 +141,6 @@ export default function ChurchZones() {
         </div>
       </section>
 
-      {/* ── Highlight Cards ── */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
