@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description: "A place of faith, community, and spiritual growth in Maharagama, Sri Lanka. Join us for Mass services, religious education, and community fellowship.",
   keywords: "St. Mary's Church, Maharagama, Catholic Church, Sri Lanka, Our Lady of the Assumption, Mass schedules, Parish",
   authors: [{ name: "St. Mary's Church Maharagama" }],
+  icons: {
+    icon: '/logo2.png',
+    apple: '/logo2.png',
+  },
   openGraph: {
     title: "St. Mary's Church Maharagama",
     description: "A place of faith, community, and spiritual growth in Maharagama, Sri Lanka",
