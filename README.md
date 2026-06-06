@@ -42,7 +42,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 3. **Mass Schedules Page**:
    - Weekday Schedule: Cards with gradient top strip, large time display, and hover scale on icon
    - Weekend Masses: Cards with Sinhala / English / Bilingual language chips
-   - Special Services: Left-bordered cards (New Year Mass, Eucharistic Adoration, Holy Days, Praise & Worship, Novenas)
+   - Special Services: Left-bordered cards (Eucharistic Adoration, Holy Days, Praise & Worship, Novenas)
    - Important Information: Deep-blue section with amber icon badges (Dress Code, Office Hours, Parking)
 
 4. **Church Zones Page**:

@@ -19,12 +19,6 @@ const weekendSchedules = [
 
 const specialServices = [
   {
-    title: 'New Year Mass',
-    icon: Calendar,
-    details: ['31st Night Mass: 11:15 PM*', '1st January Mass: 8:00 AM'],
-    note: '*Eucharistic Adoration followed by the mass',
-  },
-  {
     title: 'Eucharistic Adoration',
     icon: Clock,
     details: ['Every first Friday after the mass'],
