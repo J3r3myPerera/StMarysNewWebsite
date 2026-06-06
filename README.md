@@ -14,7 +14,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 - **Events Gallery**: Photo gallery page with expandable album grids and a full-screen lightbox viewer
 - **Card-Based Contact**: Contact info, social media, and call-to-action as polished individual cards
 - **Enhanced Footer**: 4-column layout with church logo, weekend mass quick-reference, and contact details
-- **Church Logo**: Branded navigation with church logo
+- **Church Logo & Favicon**: St. Mary's church logo displayed in navigation and as the browser tab favicon
 - **Mobile-First**: Fully responsive across all devices with animated mobile menu (AnimatePresence)
 - **Fast Performance**: Built with Next.js for optimal performance
 - **SEO Optimized**: Proper metadata and structured content
@@ -121,7 +121,7 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 
 ### Images
 - **Background**: `churchMaincomp.jpg` — hero section
-- **Logo**: `logo2.png` — navigation and footer
+- **Logo & Favicon**: `logo2.png` — navigation, footer, and browser tab icon (`public/logo2.png`, `src/app/icon.png`)
 - **Priest Photo**: `priest-message.jpg` — home and about pages
 - **Event Photos**: `public/events/goodFriday_2026/` and `public/events/holySaturday_2026/` — Events Gallery page
 
@@ -188,9 +188,15 @@ For questions about the website or church information:
 - Event images sourced from `img/events/` and served via `public/events/`
 - "Events Gallery" added to Navigation and Footer
 
+### June 2026
+- **Favicon**: Replaced default Next.js/Vercel favicon with the St. Mary's church logo (`logo2.png`) in `src/app/icon.png`, `src/app/favicon.ico`, and metadata (`icons` field in `layout.tsx`)
+- **License**: Added proprietary `LICENSE` file — all rights reserved by Dinuka Perera & St. Mary's Church Maharagama
+
 ## License
 
-This project is created for St. Mary's Church Maharagama. All rights reserved.
+Copyright (c) 2026 Dinuka Perera & St. Mary's Church Maharagama. All rights reserved.
+
+Viewing the source code is permitted for personal reference only. Copying, redistribution, commercial use, or creation of derivative works is strictly prohibited. See the [LICENSE](./LICENSE) file for full terms.
 
 ---
 
