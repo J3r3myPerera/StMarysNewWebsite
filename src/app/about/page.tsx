@@ -28,9 +28,7 @@ const timeline = [
 export default function About() {
   return (
     <div className="min-h-screen">
-      {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
-        {/* Dot grid overlay */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -53,7 +51,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Timeline History ── */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -66,9 +63,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900">Our History</h2>
           </motion.div>
 
-          {/* Timeline */}
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-blue-100 md:-translate-x-px" />
 
             <div className="space-y-12">
@@ -83,7 +78,6 @@ export default function About() {
                     index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
-                  {/* Year badge — mobile: fixed left, desktop: center */}
                   <div className="relative flex-shrink-0 z-10 w-16 flex justify-center">
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-blue-900 rounded-2xl flex flex-col items-center justify-center shadow-lg text-white">
                       <span className="text-xs font-semibold leading-none text-blue-200">AD</span>
@@ -91,7 +85,6 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Card */}
                   <div
                     className={`flex-1 ${
                       index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'
@@ -103,7 +96,6 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Spacer for alternating layout */}
                   <div className="hidden md:block flex-1" />
                 </motion.div>
               ))}
@@ -112,7 +104,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Parish Priest Message ── */}
       <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"

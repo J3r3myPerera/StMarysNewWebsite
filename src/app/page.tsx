@@ -7,15 +7,11 @@ import { Heart, Users, BookOpen, ChevronDown } from 'lucide-react';
 export default function Home() {
   return (
     <div>
-      {/* ── Hero ── */}
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white h-screen flex items-center justify-center -mt-20"
         style={{ backgroundImage: "url('/churchMaincomp.jpg')" }}
       >
-        {/* Layered overlay: dark at bottom for text legibility, lighter at top */}
         <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-black/50 to-black/20" />
-
-        {/* Decorative cross pattern overlay */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -31,7 +27,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
           >
-            {/* Eyebrow */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -67,7 +62,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -84,11 +78,9 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── About + Feature Cards ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* History text */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -120,7 +112,6 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Feature cards */}
             <div className="space-y-5">
               {[
                 {
@@ -169,9 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Parish Priest Message ── */}
       <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
-        {/* Decorative background element */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -202,9 +191,7 @@ export default function Home() {
             className="bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 overflow-hidden"
           >
             <div className="grid md:grid-cols-2 gap-0">
-              {/* Message */}
               <div className="p-8 md:p-12 text-white">
-                {/* Big decorative quote */}
                 <span className="text-8xl font-serif text-amber-400/40 leading-none block -mb-6">&ldquo;</span>
                 <div className="space-y-4 text-blue-100 leading-relaxed text-[0.95rem]">
                   <p>Dear Friends and Visitors,</p>
@@ -226,7 +213,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Priest photo */}
               <div className="flex items-center justify-center p-8 md:p-10 bg-white/5">
                 <div className="relative">
                   <div className="absolute -inset-3 bg-gradient-to-br from-amber-400/30 to-transparent rounded-2xl" />

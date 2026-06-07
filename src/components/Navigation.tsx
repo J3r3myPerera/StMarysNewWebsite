@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { navItems } from '@/lib/nav';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,15 +25,6 @@ export default function Navigation() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Mass Schedules', href: '/mass-schedules' },
-    { name: 'Church Zones', href: '/church-zones' },
-    { name: 'Events Gallery', href: '/events' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   const transparent = isHome && !scrolled;
 
   return (
@@ -45,7 +37,6 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
             <img
               src="/logo2.png"
@@ -70,7 +61,6 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -99,7 +89,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
@@ -114,7 +103,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div

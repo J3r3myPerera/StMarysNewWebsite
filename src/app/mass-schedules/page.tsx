@@ -5,30 +5,23 @@ import { Clock, Calendar, Users, Car, Info } from 'lucide-react';
 
 const weekdaySchedules = [
   { day: 'Tuesday', time: '6:30 PM', location: 'Boralessgamuwa Church', note: 'Held at Boralessgamuwa Church' },
-  { day: 'Wednesday', time: '5:00 PM', location: "St. Mary's Church", note: null },
+  { day: 'Wednesday', time: '5:00 PM', location: "St. Mary's Church" },
   { day: 'Thursday', time: '6:00 AM', location: 'Church Convent', note: 'Held at the Church convent' },
-  { day: 'Friday', time: '5:30 PM', location: "St. Mary's Church", note: null },
+  { day: 'Friday', time: '5:30 PM', location: "St. Mary's Church" },
 ];
 
 const weekendSchedules = [
-  { day: 'Saturday', time: '7:30 AM', language: 'Sinhala', note: null },
+  { day: 'Saturday', time: '7:30 AM', language: 'Sinhala' },
   { day: 'Saturday', time: '6:00 PM', language: 'English', note: 'Vigil Mass' },
-  { day: 'Sunday', time: '7:30 AM', language: 'Sinhala', note: null },
+  { day: 'Sunday', time: '7:30 AM', language: 'Sinhala' },
   { day: 'Sunday', time: '5:30 PM', language: 'Bilingual', note: 'At Boralessgamuwa Church' },
 ];
 
 const specialServices = [
   {
-    title: 'New Year Mass',
-    icon: Calendar,
-    details: ['31st Night Mass: 11:15 PM*', '1st January Mass: 8:00 AM'],
-    note: '*Eucharistic Adoration followed by the mass',
-  },
-  {
     title: 'Eucharistic Adoration',
     icon: Clock,
     details: ['Every first Friday after the mass'],
-    note: null,
   },
   {
     title: 'Holy Days of Obligation',
@@ -46,7 +39,6 @@ const specialServices = [
     title: 'Novenas',
     icon: Clock,
     details: ['Every Tuesday, Wednesday and Friday before the mass'],
-    note: null,
   },
 ];
 
@@ -59,7 +51,6 @@ const langColor: Record<string, string> = {
 export default function MassSchedules() {
   return (
     <div className="min-h-screen">
-      {/* ── Hero ── */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
@@ -75,7 +66,6 @@ export default function MassSchedules() {
         </div>
       </section>
 
-      {/* ── Weekday Schedule ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -103,7 +93,6 @@ export default function MassSchedules() {
                 viewport={{ once: true }}
                 className="group bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                {/* Gradient top strip */}
                 <div className="h-1.5 bg-gradient-to-r from-blue-700 to-blue-900" />
                 <div className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
@@ -122,7 +111,6 @@ export default function MassSchedules() {
         </div>
       </section>
 
-      {/* ── Weekend Masses ── */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -157,7 +145,6 @@ export default function MassSchedules() {
                   </div>
                   <h3 className="text-lg font-bold text-blue-900 mb-1">{s.day}</h3>
                   <p className="text-3xl font-bold text-blue-700 mb-3">{s.time}</p>
-                  {/* Language chip */}
                   <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${langColor[s.language]}`}>
                     {s.language}
                   </span>
@@ -169,7 +156,6 @@ export default function MassSchedules() {
             ))}
           </div>
 
-          {/* Sunday school note */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +173,6 @@ export default function MassSchedules() {
         </div>
       </section>
 
-      {/* ── Special Services ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -230,7 +215,6 @@ export default function MassSchedules() {
         </div>
       </section>
 
-      {/* ── Important Information ── */}
       <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
