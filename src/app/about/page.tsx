@@ -43,7 +43,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About Our Church</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Church History</h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
               St. Mary&apos;s Church, Maharagama — Our Lady of the Assumption Parish
             </p>
@@ -60,7 +60,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900">Our History</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-900">Church History</h2>
           </motion.div>
 
           <div className="relative">

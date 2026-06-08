@@ -32,10 +32,10 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 
 1. **Home Page**:
    - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, dual CTA buttons, and scroll indicator
-   - About Our Church: Church history excerpt with animated feature cards (Worship, Invitation, Education)
+   - Church History: Church history excerpt with animated feature cards (Worship, Invitation, Education)
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
 
-2. **About Page**:
+2. **Church History Page**:
    - Visual timeline of church history: 1940, 1953, 1955, 1981 — alternating left/right cards on a vertical line
    - Parish priest message in a full-width glassmorphism card
 
@@ -184,6 +184,7 @@ For questions about the website or church information:
 - **License**: Added proprietary `LICENSE` file — all rights reserved by Dinuka Perera & St. Mary's Church Maharagama
 - **Migrated hosting to Vercel**: Removed `output: 'export'` static-export constraint; site now runs as a full Next.js app with native image optimisation on Vercel's free Hobby tier. Custom domain `stmarysmaharagama.org` DNS updated from Firebase to Vercel.
 - **Code cleanup**: Removed ~90 narrating JSX comments, `note: null` padding fields in schedule data, redundant `Readonly<>` wrapper in `layout.tsx`, and a thin `openLightbox` one-liner wrapper in the events page. Extracted shared nav items to `src/lib/nav.ts` to eliminate the duplicate array that existed in both `Navigation.tsx` and `Footer.tsx`.
+- **Renamed "About" to "Church History"**: Updated the nav label, home page section heading, and About page hero/section headings from "About Our Church" / "Our History" to "Church History" for clarity and consistency across the site.
 
 ## License
 
