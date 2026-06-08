@@ -107,7 +107,7 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center mt-8 text-blue-700 font-semibold hover:text-blue-900 transition-colors group"
               >
-                Read church full history
+                Read the full church history
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </motion.div>

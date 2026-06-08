@@ -35,7 +35,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Church History: Church history excerpt with animated feature cards (Worship, Invitation, Education)
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
 
-2. **About Page**:
+2. **Church History Page**:
    - Visual timeline of church history: 1940, 1953, 1955, 1981 — alternating left/right cards on a vertical line
    - Parish priest message in a full-width glassmorphism card
 
