@@ -88,7 +88,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-                About Our Church
+                 Church History
               </h2>
 
               <div className="space-y-5 text-gray-600 leading-relaxed">
@@ -107,7 +107,7 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center mt-8 text-blue-700 font-semibold hover:text-blue-900 transition-colors group"
               >
-                Read our full history
+                Read church full history
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </motion.div>
