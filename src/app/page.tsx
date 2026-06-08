@@ -88,7 +88,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-                 Church History
+                Church History
               </h2>
 
               <div className="space-y-5 text-gray-600 leading-relaxed">
