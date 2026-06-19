@@ -6,6 +6,14 @@ import { Images, ChevronDown, ChevronUp, X, ChevronLeft, ChevronRight } from 'lu
 
 const events = [
   {
+    folder: 'mayFeast_2026',
+    title: 'May Feast 2026',
+    date: 'May 2026',
+    cover: null,
+    comingSoon: true,
+    images: [] as string[],
+  },
+  {
     folder: 'goodFriday_2026',
     title: 'Good Friday 2026',
     date: 'Friday, 3 April 2026',
@@ -98,12 +106,23 @@ export default function EventsPage() {
               >
                 <div className="grid md:grid-cols-[280px_1fr] gap-0">
                   <div className="relative h-56 md:h-auto overflow-hidden">
-                    <img
-                      src={`/events/${event.folder}/${event.cover}`}
-                      alt={`${event.title} cover`}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 md:bg-gradient-to-b md:from-transparent md:to-black/30" />
+                    {event.comingSoon ? (
+                      <div className="w-full h-full min-h-[224px] bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 flex flex-col items-center justify-center gap-3">
+                        <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">
+                          <Images className="w-7 h-7 text-white/60" />
+                        </div>
+                        <span className="text-white/80 text-sm font-semibold tracking-widest uppercase">Coming Soon</span>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={`/events/${event.folder}/${event.cover}`}
+                          alt={`${event.title} cover`}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 md:bg-gradient-to-b md:from-transparent md:to-black/30" />
+                      </>
+                    )}
                   </div>
 
                   <div className="p-8 flex flex-col justify-between">
@@ -114,20 +133,22 @@ export default function EventsPage() {
                       <h2 className="text-3xl font-bold text-blue-900 mb-3">{event.title}</h2>
                       <div className="flex items-center gap-2 text-gray-500 text-sm">
                         <Images className="w-4 h-4" />
-                        <span>{event.images.length} photos</span>
+                        <span>{event.comingSoon ? 'Photos coming soon' : `${event.images.length} photos`}</span>
                       </div>
                     </div>
 
-                    <button
-                      onClick={() => setExpanded(expanded === eventIdx ? null : eventIdx)}
-                      className="mt-6 self-start flex items-center gap-2 bg-blue-800 hover:bg-blue-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
-                    >
-                      {expanded === eventIdx ? (
-                        <>Hide Photos <ChevronUp className="w-4 h-4" /></>
-                      ) : (
-                        <>View All Photos <ChevronDown className="w-4 h-4" /></>
-                      )}
-                    </button>
+                    {!event.comingSoon && (
+                      <button
+                        onClick={() => setExpanded(expanded === eventIdx ? null : eventIdx)}
+                        className="mt-6 self-start flex items-center gap-2 bg-blue-800 hover:bg-blue-900 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                      >
+                        {expanded === eventIdx ? (
+                          <>Hide Photos <ChevronUp className="w-4 h-4" /></>
+                        ) : (
+                          <>View All Photos <ChevronDown className="w-4 h-4" /></>
+                        )}
+                      </button>
+                    )}
                   </div>
                 </div>
 
