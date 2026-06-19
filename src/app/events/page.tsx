@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Images, ChevronDown, ChevronUp, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -74,6 +74,21 @@ export default function EventsPage() {
     const total = events[lightbox.eventIdx].images.length;
     setLightbox({ ...lightbox, imgIdx: (lightbox.imgIdx + 1) % total });
   };
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const total = events[lightbox.eventIdx].images.length;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft')
+        setLightbox(lb => lb && { ...lb, imgIdx: (lb.imgIdx - 1 + total) % total });
+      else if (e.key === 'ArrowRight')
+        setLightbox(lb => lb && { ...lb, imgIdx: (lb.imgIdx + 1) % total });
+      else if (e.key === 'Escape')
+        setLightbox(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox]);
 
   return (
     <div className="min-h-screen">
