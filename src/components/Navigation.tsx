@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,10 +39,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
-            <img
+            <Image
               src="/logo2.png"
               alt="St. Mary's Church Logo"
+              width={48}
+              height={48}
               className="h-12 w-auto"
+              priority
             />
             <div>
               <h1
