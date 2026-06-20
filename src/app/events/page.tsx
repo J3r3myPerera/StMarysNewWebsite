@@ -135,6 +135,7 @@ export default function EventsPage() {
                           src={`/events/${event.folder}/${event.cover}`}
                           alt={`${event.title} cover`}
                           fill
+                          sizes="(max-width: 768px) 100vw, 280px"
                           className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 md:bg-gradient-to-b md:from-transparent md:to-black/30" />
@@ -189,6 +190,7 @@ export default function EventsPage() {
                               src={`/events/${event.folder}/${img}`}
                               alt={img}
                               fill
+                              sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-xl" />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Youtube, Phone, MapPin, Clock } from 'lucide-react';
 import { navItems } from '@/lib/nav';
 
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo2.png" alt="St. Mary's Church Logo" className="h-12 w-auto opacity-90" />
+              <Image src="/logo2.png" alt="St. Mary's Church Logo" width={48} height={48} className="h-12 w-auto opacity-90" />
               <div>
                 <p className="text-white font-bold text-lg leading-tight">St. Mary&apos;s Church</p>
                 <p className="text-gray-400 text-xs">Maharagama, Sri Lanka</p>
