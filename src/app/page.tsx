@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Heart, Users, BookOpen, ChevronDown } from 'lucide-react';
 
 export default function Home() {
@@ -216,10 +217,13 @@ export default function Home() {
               <div className="flex items-center justify-center p-8 md:p-10 bg-white/5">
                 <div className="relative">
                   <div className="absolute -inset-3 bg-gradient-to-br from-amber-400/30 to-transparent rounded-2xl" />
-                  <img
+                  <Image
                     src="/priest-message.jpg"
                     alt="Rev. Fr. Sudath Gunetilleke"
+                    width={320}
+                    height={444}
                     className="relative rounded-2xl shadow-2xl max-h-[500px] w-full object-cover"
+                    priority
                   />
                 </div>
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Images, ChevronDown, ChevronUp, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -130,10 +131,11 @@ export default function EventsPage() {
                       </div>
                     ) : (
                       <>
-                        <img
+                        <Image
                           src={`/events/${event.folder}/${event.cover}`}
                           alt={`${event.title} cover`}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 md:bg-gradient-to-b md:from-transparent md:to-black/30" />
                       </>
@@ -183,11 +185,11 @@ export default function EventsPage() {
                             onClick={() => setLightbox({ eventIdx, imgIdx })}
                             className="relative aspect-square overflow-hidden rounded-xl group focus:outline-none focus:ring-2 focus:ring-blue-600"
                           >
-                            <img
+                            <Image
                               src={`/events/${event.folder}/${img}`}
                               alt={img}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              loading="lazy"
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-xl" />
                           </button>
