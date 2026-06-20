@@ -8,8 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "St. Mary's Church Maharagama - Our Lady of the Assumption Parish",
-  description: "A place of faith, community, and spiritual growth in Maharagama, Sri Lanka. Join us for Mass services, religious education, and community fellowship.",
-  keywords: "St. Mary's Church, Maharagama, Catholic Church, Sri Lanka, Our Lady of the Assumption, Mass schedules, Parish",
+  description: "Our Lady of the Assumption Parish, Maharagama, Sri Lanka.",
   authors: [{ name: "St. Mary's Church Maharagama" }],
   icons: {
     icon: '/logo2.png',
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "St. Mary's Church Maharagama",
-    description: "A place of faith, community, and spiritual growth in Maharagama, Sri Lanka",
+    description: "Our Lady of the Assumption Parish, Maharagama, Sri Lanka.",
     type: "website",
     locale: "en_US",
   },
