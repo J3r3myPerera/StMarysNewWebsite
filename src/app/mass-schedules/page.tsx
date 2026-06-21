@@ -1,51 +1,66 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Clock, Calendar, Users, Car, Info } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Clock, Calendar, Users, Car, Info } from "lucide-react";
 
 const weekdaySchedules = [
-  { day: 'Tuesday', time: '6:30 PM', location: 'Boralessgamuwa Church', note: 'Held at Boralessgamuwa Church' },
-  { day: 'Wednesday', time: '5:00 PM', location: "St. Mary's Church" },
-  { day: 'Thursday', time: '6:00 AM', location: 'Church Convent', note: 'Held at the Church convent' },
-  { day: 'Friday', time: '5:30 PM', location: "St. Mary's Church" },
+  {
+    day: "Tuesday",
+    time: "6:30 PM",
+    location: "Boralessgamuwa Church",
+    note: "Held at Boralessgamuwa Church",
+  },
+  { day: "Wednesday", time: "5:00 PM", location: "St. Mary's Church" },
+  {
+    day: "Thursday",
+    time: "6:00 AM",
+    location: "Church Convent",
+    note: "Held at the Church convent",
+  },
+  { day: "Friday", time: "5:30 PM", location: "St. Mary's Church" },
 ];
 
 const weekendSchedules = [
-  { day: 'Saturday', time: '7:30 AM', language: 'Sinhala' },
-  { day: 'Saturday', time: '6:00 PM', language: 'English', note: 'Vigil Mass' },
-  { day: 'Sunday', time: '7:30 AM', language: 'Sinhala' },
-  { day: 'Sunday', time: '5:30 PM', language: 'Bilingual', note: 'At Boralessgamuwa Church' },
+  { day: "Saturday", time: "7:30 AM", language: "Sinhala" },
+  { day: "Saturday", time: "6:00 PM", language: "English", note: "Vigil Mass" },
+  { day: "Sunday", time: "7:30 AM", language: "Sinhala" },
+  {
+    day: "Sunday",
+    time: "5:30 PM",
+    language: "Bilingual",
+    note: "At Boralessgamuwa Church",
+  },
 ];
 
 const specialServices = [
   {
-    title: 'Eucharistic Adoration',
+    title: "Eucharistic Adoration",
     icon: Clock,
-    details: ['Every first Friday after the mass'],
+    details: ["Every first Friday after the mass"],
   },
   {
-    title: 'Holy Days of Obligation',
+    title: "Holy Days of Obligation",
     icon: Calendar,
-    details: ['Masses at 6:30 PM'],
-    note: 'Please check with parish priest for specific dates',
+    details: ["Masses at 6:30 PM"],
+    note: "Please check with parish priest for specific dates",
   },
   {
-    title: 'Praise and Worship',
+    title: "Praise and Worship",
     icon: Users,
-    details: ['Monday: 6:30 PM – 8:00 PM'],
-    note: 'Conducted by the Community of the Risen Lord',
+    details: ["Monday: 6:30 PM – 8:00 PM"],
+    note: "Conducted by the Community of the Risen Lord",
   },
   {
-    title: 'Novenas',
+    title: "Novenas",
     icon: Clock,
-    details: ['Every Tuesday, Wednesday and Friday before the mass'],
+    details: ["Every Tuesday, Wednesday and Friday before the mass"],
   },
 ];
 
 const langColor: Record<string, string> = {
-  Sinhala: 'bg-blue-100 text-blue-800',
-  English: 'bg-amber-100 text-amber-800',
-  Bilingual: 'bg-emerald-100 text-emerald-800',
+  Sinhala: "bg-blue-100 text-blue-800",
+  English: "bg-amber-100 text-amber-800",
+  Bilingual: "bg-emerald-100 text-emerald-800",
 };
 
 export default function MassSchedules() {
@@ -54,11 +69,21 @@ export default function MassSchedules() {
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, white 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Mass Schedules</h1>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Mass Schedules
+            </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Mass times for St. Mary&apos;s Church, Maharagama
             </p>
@@ -77,10 +102,14 @@ export default function MassSchedules() {
           >
             <div className="flex items-center justify-center gap-3 mb-3">
               <span className="h-px w-8 bg-amber-400" />
-              <span className="text-amber-600 text-sm font-semibold tracking-widest uppercase">Mon – Fri</span>
+              <span className="text-amber-600 text-sm font-semibold tracking-widest uppercase">
+                Mon – Fri
+              </span>
               <span className="h-px w-8 bg-amber-400" />
             </div>
-            <h2 className="text-4xl font-bold text-blue-900">Weekday Schedule</h2>
+            <h2 className="text-4xl font-bold text-blue-900">
+              Weekday Schedule
+            </h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -98,11 +127,19 @@ export default function MassSchedules() {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-blue-900 mb-1">{s.day}</h3>
-                  <p className="text-3xl font-bold text-blue-700 mb-2">{s.time}</p>
-                  <p className="text-xs text-gray-500 font-medium">{s.location}</p>
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">
+                    {s.day}
+                  </h3>
+                  <p className="text-3xl font-bold text-blue-700 mb-2">
+                    {s.time}
+                  </p>
+                  <p className="text-xs text-gray-500 font-medium">
+                    {s.location}
+                  </p>
                   {s.note && (
-                    <p className="text-xs text-gray-400 mt-2 italic">{s.note}</p>
+                    <p className="text-xs text-gray-400 mt-2 italic">
+                      {s.note}
+                    </p>
                   )}
                 </div>
               </motion.div>
@@ -122,7 +159,9 @@ export default function MassSchedules() {
           >
             <div className="flex items-center justify-center gap-3 mb-3">
               <span className="h-px w-8 bg-amber-400" />
-              <span className="text-amber-600 text-sm font-semibold tracking-widest uppercase">Sat & Sun</span>
+              <span className="text-amber-600 text-sm font-semibold tracking-widest uppercase">
+                Sat & Sun
+              </span>
               <span className="h-px w-8 bg-amber-400" />
             </div>
             <h2 className="text-4xl font-bold text-blue-900">Weekend Masses</h2>
@@ -143,13 +182,21 @@ export default function MassSchedules() {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-950 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
                     <Calendar className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-blue-900 mb-1">{s.day}</h3>
-                  <p className="text-3xl font-bold text-blue-700 mb-3">{s.time}</p>
-                  <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${langColor[s.language]}`}>
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">
+                    {s.day}
+                  </h3>
+                  <p className="text-3xl font-bold text-blue-700 mb-3">
+                    {s.time}
+                  </p>
+                  <span
+                    className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${langColor[s.language]}`}
+                  >
                     {s.language}
                   </span>
                   {s.note && (
-                    <p className="text-xs text-gray-400 mt-2 italic">{s.note}</p>
+                    <p className="text-xs text-gray-400 mt-2 italic">
+                      {s.note}
+                    </p>
                   )}
                 </div>
               </motion.div>
@@ -166,7 +213,9 @@ export default function MassSchedules() {
             <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-2xl p-5">
               <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
               <p className="text-blue-800 text-sm leading-relaxed">
-                <strong>Sunday School:</strong> Held on Sunday mornings after the 7:30 AM Mass and on Saturday evenings after the 6:00 PM Mass.
+                <strong>Sunday School:</strong> Held on Sunday mornings in
+                Sinhala after the 7:30 AM Mass and on Saturday evenings in
+                English after the 6:00 PM Mass.
               </p>
             </div>
           </motion.div>
@@ -182,7 +231,9 @@ export default function MassSchedules() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-4xl font-bold text-blue-900">Special Services</h2>
+            <h2 className="text-4xl font-bold text-blue-900">
+              Special Services
+            </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -203,7 +254,12 @@ export default function MassSchedules() {
                 </div>
                 <ul className="space-y-1.5 mb-3">
                   {s.details.map((d, idx) => (
-                    <li key={idx} className="text-blue-700 font-semibold text-sm">{d}</li>
+                    <li
+                      key={idx}
+                      className="text-blue-700 font-semibold text-sm"
+                    >
+                      {d}
+                    </li>
                   ))}
                 </ul>
                 {s.note && (
@@ -218,7 +274,11 @@ export default function MassSchedules() {
       <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, white 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -230,28 +290,32 @@ export default function MassSchedules() {
           >
             <div className="flex items-center justify-center gap-3 mb-3">
               <span className="h-px w-8 bg-amber-400" />
-              <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">Good to Know</span>
+              <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">
+                Good to Know
+              </span>
               <span className="h-px w-8 bg-amber-400" />
             </div>
-            <h2 className="text-4xl font-bold text-white">Important Information</h2>
+            <h2 className="text-4xl font-bold text-white">
+              Important Information
+            </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {[
               {
                 icon: Users,
-                title: 'Dress Code',
-                body: 'We encourage modest and respectful attire for all services. Please dress appropriately for worship.',
+                title: "Dress Code",
+                body: "We encourage modest and respectful attire for all services. Please dress appropriately for worship.",
               },
               {
                 icon: Clock,
-                title: 'Parish Priest Office',
-                body: 'Office days are on Wednesday from 9:00 AM to 5:00 PM.',
+                title: "Parish Priest Office",
+                body: "Office days are on Wednesday from 9:00 AM to 5:00 PM.",
               },
               {
                 icon: Car,
-                title: 'Parking',
-                body: 'Free parking is available in the church parking lot.',
+                title: "Parking",
+                body: "Free parking is available in the church parking lot.",
               },
             ].map(({ icon: Icon, title, body }, i) => (
               <motion.div
@@ -279,7 +343,8 @@ export default function MassSchedules() {
             className="text-center"
           >
             <p className="text-blue-200 mb-3 text-sm">
-              For any changes to the schedule or special announcements, please check our notice board or contact the parish office.
+              For any changes to the schedule or special announcements, please
+              check our notice board or contact the parish office.
             </p>
             <a
               href="tel:+94112843561"
