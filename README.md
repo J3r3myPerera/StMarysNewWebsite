@@ -157,6 +157,14 @@ For questions about the website or church information:
 
 ## Recent Updates
 
+### June 2026 — Image Optimisation & SEO
+- **Next.js `<Image>` component**: Replaced every plain `<img>` tag (Navigation, Home, Events, Footer) with the Next.js `<Image>` component for automatic format conversion, srcset generation, and lazy loading
+- **Responsive `sizes` props**: Added accurate `sizes` attributes on all images — event cover (`(max-width: 768px) 100vw, 280px`), gallery thumbnails (matching the 2→3→4→5-column grid breakpoints), and priest photo (`(max-width: 768px) 100vw, 50vw`)
+- **Correct intrinsic dimensions**: Priest photo dimensions set to actual file size (`320×444`) rather than invented values
+- **Per-page SEO metadata**: Added `layout.tsx` files with `title`, `description`, and OpenGraph tags for every route — Church History, Mass Schedules, Church Zones, Events Gallery, and Contact
+- **Lightbox keyboard navigation**: Arrow-key (← →) and Escape key support added to the full-screen lightbox on the Events Gallery page
+- **Coming Soon album**: May Feast 2026 album added to the Events Gallery as a "Coming Soon" placeholder while photos are pending
+
 ### May 2026 — Full UI Modernisation
 - **Navigation**: Scroll-aware transparency (transparent on home hero, frosted-glass white on scroll); animated `layoutId` underline for active link; `AnimatePresence` slide-in mobile menu
 - **Home Hero**: True full-screen (`h-screen`) with multi-layer gradient overlay, dot-grid pattern, amber eyebrow text, dual CTAs (filled + outline), animated scroll indicator
