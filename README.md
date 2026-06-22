@@ -11,7 +11,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 - **Timeline History**: Church history rendered as a visual timeline (1940 → 1981) on the About page
 - **Language Chips**: Weekend mass cards display Sinhala / English / Bilingual pill badges
 - **Church Zones Grid**: 16 parish zones displayed as numbered cards (replaced table layout)
-- **Events Gallery**: Photo gallery page with expandable album grids and a full-screen lightbox viewer
+- **Events Gallery**: Photo gallery page with expandable album grids and a full-screen lightbox viewer with keyboard and touch/swipe navigation
 - **Card-Based Contact**: Contact info, social media, and call-to-action as polished individual cards
 - **Enhanced Footer**: 4-column layout with church logo, weekend mass quick-reference, and contact details
 - **Church Logo & Favicon**: St. Mary's church logo displayed in navigation and as the browser tab favicon
@@ -54,7 +54,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Two event albums: Good Friday 2026 (35 photos) and Holy Saturday 2026 (84 photos)
    - Each album shows a cover photo, date, title, and photo count
    - "View All Photos" expands an inline grid (lazy-loaded thumbnails)
-   - Clicking any photo opens a full-screen lightbox with prev/next navigation and photo counter
+   - Clicking any photo opens a full-screen lightbox with prev/next navigation, keyboard arrow keys, and touch/swipe gesture support
 
 6. **Contact Page**:
    - Contact info (Phone, Address, Office Hours) as individual hover cards
@@ -163,6 +163,7 @@ For questions about the website or church information:
 - **Correct intrinsic dimensions**: Priest photo dimensions set to actual file size (`320×444`) rather than invented values
 - **Per-page SEO metadata**: Added `layout.tsx` files with `title`, `description`, and OpenGraph tags for every route — Church History, Mass Schedules, Church Zones, Events Gallery, and Contact
 - **Lightbox keyboard navigation**: Arrow-key (← →) and Escape key support added to the full-screen lightbox on the Events Gallery page
+- **Lightbox touch/swipe navigation**: Swipe left/right on the image to navigate between photos on mobile (50 px threshold via `pointerdown`/`pointerup` delta)
 - **Coming Soon album**: May Feast 2026 album added to the Events Gallery as a "Coming Soon" placeholder while photos are pending
 
 ### May 2026 — Full UI Modernisation

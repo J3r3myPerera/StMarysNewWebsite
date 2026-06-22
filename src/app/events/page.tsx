@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Images, ChevronDown, ChevronUp, X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -61,6 +61,7 @@ type LightboxState = { eventIdx: number; imgIdx: number } | null;
 export default function EventsPage() {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [lightbox, setLightbox] = useState<LightboxState>(null);
+  const swipeStartX = useRef<number | null>(null);
 
   const closeLightbox = () => setLightbox(null);
 
@@ -244,8 +245,16 @@ export default function EventsPage() {
               transition={{ duration: 0.15 }}
               src={`/events/${events[lightbox.eventIdx].folder}/${events[lightbox.eventIdx].images[lightbox.imgIdx]}`}
               alt=""
-              className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+              className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl touch-none"
               onClick={(e) => e.stopPropagation()}
+              onPointerDown={(e) => { swipeStartX.current = e.clientX; }}
+              onPointerUp={(e) => {
+                if (swipeStartX.current === null) return;
+                const delta = e.clientX - swipeStartX.current;
+                swipeStartX.current = null;
+                if (delta < -50) lightboxNext();
+                else if (delta > 50) lightboxPrev();
+              }}
             />
 
             <button
