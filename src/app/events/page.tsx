@@ -247,7 +247,7 @@ export default function EventsPage() {
               alt=""
               className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl touch-none"
               onClick={(e) => e.stopPropagation()}
-              onPointerDown={(e) => { swipeStartX.current = e.clientX; }}
+              onPointerDown={(e) => { swipeStartX.current = e.clientX; e.currentTarget.setPointerCapture(e.pointerId); }}
               onPointerUp={(e) => {
                 if (swipeStartX.current === null) return;
                 const delta = e.clientX - swipeStartX.current;
@@ -255,6 +255,7 @@ export default function EventsPage() {
                 if (delta < -50) lightboxNext();
                 else if (delta > 50) lightboxPrev();
               }}
+              onPointerCancel={() => { swipeStartX.current = null; }}
             />
 
             <button
