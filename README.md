@@ -51,7 +51,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Community Engagement, Pastoral Care, Easy Communication highlight cards
 
 5. **Events Gallery Page** (`/events`):
-   - Two event albums: Good Friday 2026 (35 photos) and Holy Saturday 2026 (84 photos)
+   - Four event albums: May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), and Holy Saturday 2026 (84 photos)
    - Each album shows a cover photo, date, title, and photo count
    - "View All Photos" expands an inline grid (lazy-loaded thumbnails)
    - Clicking any photo opens a full-screen lightbox with prev/next navigation, keyboard arrow keys, and touch/swipe gesture support
@@ -124,10 +124,15 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 - **Background**: `churchMaincomp.jpg` — hero section
 - **Logo & Favicon**: `logo2.png` — navigation, footer, and browser tab icon (`public/logo2.png`, `src/app/icon.png`)
 - **Priest Photo**: `priest-message.jpg` — home and about pages
-- **Event Photos**: `public/events/goodFriday_2026/` and `public/events/holySaturday_2026/` — Events Gallery page
+- **Event Photos**: `public/events/mayFeastProcession_2026/`, `public/events/mayFeastMass_2026/`, `public/events/goodFriday_2026/`, and `public/events/holySaturday_2026/` — Events Gallery page
 
 ### Adding New Events
-To add a new event to the gallery, place the photos in `public/events/<folder-name>/` and add a new entry to the `events` array at the top of `src/app/events/page.tsx`, following the same structure as the existing entries.
+To add a new event to the gallery:
+
+1. Place the source photos in `img/events/<folder-name>/`
+2. Copy them to `public/events/<folder-name>/` for the site to serve
+3. Add a new entry to the `events` array at the top of `src/app/events/page.tsx`, following the same structure as the existing entries
+4. Add a matching entry to `img/events/manifest.json`
 
 ## Content Structure
 
@@ -137,7 +142,7 @@ To add a new event to the gallery, place the photos in `public/events/<folder-na
 - **Church Zones**: 16 parish zones (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
 - **Mass Schedules**: Weekday, weekend (with language), special services, and important info
 - **Contact**: Phone, address, office hours, Facebook, YouTube, and Google Maps
-- **Events Gallery**: Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
+- **Events Gallery**: May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
 
 ## Deployment
 
@@ -157,6 +162,13 @@ For questions about the website or church information:
 
 ## Recent Updates
 
+### July 2026 — May Feast 2026 Albums
+- **May Feast Procession 2026** album: 127 photos added to the Events Gallery
+- **May Feast Mass 2026** album: 71 photos added to the Events Gallery
+- Replaced the earlier "Coming Soon" May Feast placeholder with two live albums
+- Event images sourced from `img/events/mayFeastProcession_2026/` and `img/events/mayFeastMass_2026/`, served via `public/events/`
+- `img/events/manifest.json` updated with both new album entries
+
 ### June 2026 — Image Optimisation & SEO
 - **Next.js `<Image>` component**: Replaced every plain `<img>` tag (Navigation, Home, Events, Footer) with the Next.js `<Image>` component for automatic format conversion, srcset generation, and lazy loading
 - **Responsive `sizes` props**: Added accurate `sizes` attributes on all images — event cover (`(max-width: 768px) 100vw, 280px`), gallery thumbnails (matching the 2→3→4→5-column grid breakpoints), and priest photo (`(max-width: 768px) 100vw, 50vw`)
@@ -164,7 +176,6 @@ For questions about the website or church information:
 - **Per-page SEO metadata**: Added `layout.tsx` files with `title`, `description`, and OpenGraph tags for every route — Church History, Mass Schedules, Church Zones, Events Gallery, and Contact
 - **Lightbox keyboard navigation**: Arrow-key (← →) and Escape key support added to the full-screen lightbox on the Events Gallery page
 - **Lightbox touch/swipe navigation**: Swipe left/right on the image to navigate between photos on mobile (50 px threshold via `pointerdown`/`pointerup` delta)
-- **Coming Soon album**: May Feast 2026 album added to the Events Gallery as a "Coming Soon" placeholder while photos are pending
 
 ### May 2026 — Full UI Modernisation
 - **Navigation**: Scroll-aware transparency (transparent on home hero, frosted-glass white on scroll); animated `layoutId` underline for active link; `AnimatePresence` slide-in mobile menu
