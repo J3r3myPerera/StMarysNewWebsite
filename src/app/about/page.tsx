@@ -21,7 +21,7 @@ const timeline = [
   {
     year: '1981',
     title: 'Church Blessed',
-    desc: 'The Church dedicated to Our Lady of the Assumption — the vision of Rev. Fr. Francis Fernando — was blessed by Auxiliary Bishop Rt. Rev. Dr Oswald Gomis on 16th August 1981.',
+    desc: 'The Church dedicated to Our Lady of the Assumption, the vision of Rev. Fr. Francis Fernando, was blessed by Auxiliary Bishop Rt. Rev. Dr Oswald Gomis on 16th August 1981.',
   },
 ];
 
@@ -45,7 +45,7 @@ export default function About() {
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Church History</h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-              St. Mary&apos;s Church, Maharagama — Our Lady of the Assumption Parish
+              St. Mary&apos;s Church, Maharagama: Our Lady of the Assumption Parish
             </p>
           </motion.div>
         </div>
@@ -137,7 +137,7 @@ export default function About() {
                 Our Lady of the Assumption Parish stands as a beacon of faith, hope, and love in the heart of Maharagama. For generations, this sacred community has been a spiritual home where families gather to worship, individuals find solace and guidance, and the love of Christ is shared through acts of service and fellowship.
               </p>
               <p>
-                Under the loving patronage of Our Lady of the Assumption, we strive to be a welcoming community that embraces all who seek to deepen their relationship with God. Our parish is more than just a place of worship — it is a family where faith is nurtured, traditions are cherished, and every person is valued as a beloved child of God.
+                Under the loving patronage of Our Lady of the Assumption, we strive to be a welcoming community that embraces all who seek to deepen their relationship with God. Our parish is more than just a place of worship; it is a family where faith is nurtured, traditions are cherished, and every person is valued as a beloved child of God.
               </p>
               <p>
                 We extend a warm welcome to all visitors and parishioners. Whether you&apos;re a long-time member or visiting for the first time, we hope you feel at home in our church family.
