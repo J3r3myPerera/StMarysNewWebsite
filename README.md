@@ -36,7 +36,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
 
 2. **Church History Page**:
-   - Visual timeline of church history: 1940, 1953, 1955, 1981 — alternating left/right cards on a vertical line
+   - Visual timeline of church history: 1940, 1953, 1955, 1981, alternating left/right cards on a vertical line
    - Parish priest message in a full-width glassmorphism card
 
 3. **Mass Schedules Page**:
@@ -97,10 +97,10 @@ npm run dev
 
 ## Available Scripts
 
-- `npm run dev` — Start development server
-- `npm run build` — Build for production
-- `npm run start` — Start production server
-- `npm run lint` — Run ESLint
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
 
 ## Customization
 
@@ -116,15 +116,15 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 - **Events Gallery Page**: `src/app/events/page.tsx`
 - **Navigation**: `src/components/Navigation.tsx`
 - **Footer**: `src/components/Footer.tsx`
-- **Shared Nav Links**: `src/lib/nav.ts` — single source of truth for navigation items used by both the nav bar and footer
+- **Shared Nav Links**: `src/lib/nav.ts`, single source of truth for navigation items used by both the nav bar and footer
 - **Global Styles**: `src/app/globals.css`
 - **Images**: Static assets in `public/`
 
 ### Images
-- **Background**: `churchMaincomp.jpg` — hero section
-- **Logo & Favicon**: `logo2.png` — navigation, footer, and browser tab icon (`public/logo2.png`, `src/app/icon.png`)
-- **Priest Photo**: `priest-message.jpg` — home and about pages
-- **Event Photos**: `public/events/mayFeastProcession_2026/`, `public/events/mayFeastMass_2026/`, `public/events/goodFriday_2026/`, and `public/events/holySaturday_2026/` — Events Gallery page
+- **Background**: `churchMaincomp.jpg`, hero section
+- **Logo & Favicon**: `logo2.png`, navigation, footer, and browser tab icon (`public/logo2.png`, `src/app/icon.png`)
+- **Priest Photo**: `priest-message.jpg`, home and about pages
+- **Event Photos**: `public/events/mayFeastProcession_2026/`, `public/events/mayFeastMass_2026/`, `public/events/goodFriday_2026/`, and `public/events/holySaturday_2026/`, used on the Events Gallery page
 
 ### Adding New Events
 To add a new event to the gallery:
@@ -146,7 +146,7 @@ To add a new event to the gallery:
 
 ## Deployment
 
-The site runs as a full Next.js application (server runtime, image optimisation enabled). It is hosted on **Vercel** at [stmarysmaharagama.org](https://stmarysmaharagama.org), connected to the `main` branch of this repository — every push to `main` triggers an automatic production deployment.
+The site runs as a full Next.js application (server runtime, image optimisation enabled). It is hosted on **Vercel** at [stmarysmaharagama.org](https://stmarysmaharagama.org), connected to the `main` branch of this repository; every push to `main` triggers an automatic production deployment.
 
 ### Deploy to Vercel
 Import the GitHub repository at [vercel.com/new](https://vercel.com/new). Vercel auto-detects Next.js and no additional configuration is required.
@@ -162,22 +162,22 @@ For questions about the website or church information:
 
 ## Recent Updates
 
-### July 2026 — May Feast 2026 Albums
+### July 2026: May Feast 2026 Albums
 - **May Feast Procession 2026** album: 127 photos added to the Events Gallery
 - **May Feast Mass 2026** album: 71 photos added to the Events Gallery
 - Replaced the earlier "Coming Soon" May Feast placeholder with two live albums
 - Event images sourced from `img/events/mayFeastProcession_2026/` and `img/events/mayFeastMass_2026/`, served via `public/events/`
 - `img/events/manifest.json` updated with both new album entries
 
-### June 2026 — Image Optimisation & SEO
+### June 2026: Image Optimisation & SEO
 - **Next.js `<Image>` component**: Replaced every plain `<img>` tag (Navigation, Home, Events, Footer) with the Next.js `<Image>` component for automatic format conversion, srcset generation, and lazy loading
-- **Responsive `sizes` props**: Added accurate `sizes` attributes on all images — event cover (`(max-width: 768px) 100vw, 280px`), gallery thumbnails (matching the 2→3→4→5-column grid breakpoints), and priest photo (`(max-width: 768px) 100vw, 50vw`)
+- **Responsive `sizes` props**: Added accurate `sizes` attributes on all images: event cover (`(max-width: 768px) 100vw, 280px`), gallery thumbnails (matching the 2→3→4→5-column grid breakpoints), and priest photo (`(max-width: 768px) 100vw, 50vw`)
 - **Correct intrinsic dimensions**: Priest photo dimensions set to actual file size (`320×444`) rather than invented values
-- **Per-page SEO metadata**: Added `layout.tsx` files with `title`, `description`, and OpenGraph tags for every route — Church History, Mass Schedules, Church Zones, Events Gallery, and Contact
+- **Per-page SEO metadata**: Added `layout.tsx` files with `title`, `description`, and OpenGraph tags for every route: Church History, Mass Schedules, Church Zones, Events Gallery, and Contact
 - **Lightbox keyboard navigation**: Arrow-key (← →) and Escape key support added to the full-screen lightbox on the Events Gallery page
 - **Lightbox touch/swipe navigation**: Swipe left/right on the image to navigate between photos on mobile (50 px threshold via `pointerdown`/`pointerup` delta)
 
-### May 2026 — Full UI Modernisation
+### May 2026: Full UI Modernisation
 - **Navigation**: Scroll-aware transparency (transparent on home hero, frosted-glass white on scroll); animated `layoutId` underline for active link; `AnimatePresence` slide-in mobile menu
 - **Home Hero**: True full-screen (`h-screen`) with multi-layer gradient overlay, dot-grid pattern, amber eyebrow text, dual CTAs (filled + outline), animated scroll indicator
 - **Home Feature Cards**: Redesigned as horizontal rows with gradient icon badges and hover lift
@@ -192,7 +192,7 @@ For questions about the website or church information:
 - **Copyright**: Updated to 2026
 - **AI slop audit**: Removed invented timeline subtitles, redundant eyebrow labels, hollow filler subtitles, and unverified copy across all pages
 
-### May 2026 — Events Gallery
+### May 2026: Events Gallery
 - **New page** at `/events`: photo gallery with expandable album grids and full-screen lightbox
 - **Good Friday 2026** album: 35 photos
 - **Holy Saturday 2026** album: 84 photos
@@ -201,7 +201,7 @@ For questions about the website or church information:
 
 ### June 2026
 - **Favicon**: Replaced default Next.js/Vercel favicon with the St. Mary's church logo (`logo2.png`) in `src/app/icon.png`, `src/app/favicon.ico`, and metadata (`icons` field in `layout.tsx`)
-- **License**: Added proprietary `LICENSE` file — all rights reserved by Dinuka Perera & St. Mary's Church Maharagama
+- **License**: Added proprietary `LICENSE` file; all rights reserved by Dinuka Perera & St. Mary's Church Maharagama
 - **Migrated hosting to Vercel**: Removed `output: 'export'` static-export constraint; site now runs as a full Next.js app with native image optimisation on Vercel's free Hobby tier. Custom domain `stmarysmaharagama.org` DNS updated from Firebase to Vercel.
 - **Code cleanup**: Removed ~90 narrating JSX comments, `note: null` padding fields in schedule data, redundant `Readonly<>` wrapper in `layout.tsx`, and a thin `openLightbox` one-liner wrapper in the events page. Extracted shared nav items to `src/lib/nav.ts` to eliminate the duplicate array that existed in both `Navigation.tsx` and `Footer.tsx`.
 - **Renamed "About" to "Church History"**: Updated the nav label, home page section heading, and About page hero/section headings from "About Our Church" / "Our History" to "Church History" for clarity and consistency across the site.

@@ -67,11 +67,16 @@ export default function Footer() {
                 { day: 'Saturday', time: '7:30 AM', lang: 'Sinhala' },
                 { day: 'Saturday', time: '6:00 PM', lang: 'English (Vigil)' },
                 { day: 'Sunday', time: '7:30 AM', lang: 'Sinhala' },
-                { day: 'Sunday', time: '5:30 PM', lang: 'Bilingual' },
+                { day: 'Sunday', time: '5:30 PM', lang: 'Bilingual', note: 'At Boralessgamuwa Church' },
               ].map((m) => (
-                <li key={m.day + m.time} className="flex items-center justify-between gap-4">
-                  <span className="text-gray-400">{m.day} · {m.lang}</span>
-                  <span className="text-amber-400 font-semibold tabular-nums">{m.time}</span>
+                <li key={m.day + m.time} className="flex flex-col gap-0.5">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-400">{m.day} · {m.lang}</span>
+                    <span className="text-amber-400 font-semibold tabular-nums">{m.time}</span>
+                  </div>
+                  {m.note && (
+                    <span className="text-gray-500 text-xs italic">{m.note}</span>
+                  )}
                 </li>
               ))}
             </ul>
