@@ -71,7 +71,7 @@ const feastSchedule: FeastDay[] = [
     date: "August 19",
     title: "Fourth Novena",
     icon: Calendar,
-    organizers: "Godigamuwa / Ambagahapura I",
+    organizers: "Godigamuwa / Ambagahapura I Zones",
     theme: "Sanctity of the Church",
     reading: "1 Corinthians 6:12-20",
     gospel: "John 2:13-22",
@@ -81,7 +81,7 @@ const feastSchedule: FeastDay[] = [
     date: "August 20",
     title: "Fifth Novena",
     icon: Calendar,
-    organizers: "High Level Road / Pamunuwa / Arawwala I",
+    organizers: "High Level Road / Pamunuwa / Arawwala I Zones",
     theme: "The Grace that Kills Sin",
     reading: "1 John 1:5-10",
     gospel: "Luke 15:11-24",
@@ -91,7 +91,7 @@ const feastSchedule: FeastDay[] = [
     date: "August 21",
     title: "Sixth Novena",
     icon: Calendar,
-    organizers: "Ambagahapura II / Arawwala II",
+    organizers: "Ambagahapura II / Arawwala II Zones",
     theme: "The Beautiful Family",
     reading: "Ephesians 5:21-33",
     gospel: "Matthew 7:24-29",
@@ -105,7 +105,7 @@ const feastSchedule: FeastDay[] = [
     times: [{ time: "7:00 PM" }],
     celebrant: {
       role: "Presiding Priest",
-      name: "Rev. Fr. Daya Darshana – Director, St. Sebastian's College, Moratuwa",
+      name: "Rev. Fr. Daya Darshana – Rector, St. Sebastian's College, Moratuwa",
     },
   },
   {
@@ -116,7 +116,7 @@ const feastSchedule: FeastDay[] = [
     times: [{ time: "8:00 AM" }],
     celebrant: {
       role: "Main Celebrant",
-      name: "Rev. Fr. Gihan Gunathilaka – National Director, National Catholic Family Apostolate Service",
+      name: "Rev. Fr. Gihan Gunathilaka – National Director, Catholic Family Apostolate",
     },
   },
 ];
@@ -131,7 +131,7 @@ const weekdaySchedules = [
   { day: "Wednesday", time: "5:00 PM", location: "St. Mary's Church" },
   {
     day: "Thursday",
-    time: "6:00 AM",
+    time: "6:30 AM",
     location: "Church Convent",
     note: "Held at the Church convent",
   },

@@ -63,7 +63,7 @@ export default function Home() {
                 href="/about"
                 className="border-2 border-white/70 text-white px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
               >
-                Learn About Us
+                About the Church
               </Link>
             </div>
           </motion.div>

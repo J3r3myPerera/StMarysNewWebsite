@@ -32,7 +32,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 ## Pages & Sections
 
 1. **Home Page**:
-   - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, three CTA buttons (View Mass Schedules / Church Feast Schedule / Learn About Us), and scroll indicator
+   - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, three CTA buttons (View Mass Schedules / Church Feast Schedule / About the Church), and scroll indicator
    - Church History: Church history excerpt with animated feature cards (Worship, Invitation, Education)
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
 
@@ -166,6 +166,12 @@ For questions about the website or church information:
 ## Recent Updates
 
 A full, dated history of every change is kept in [CHANGELOG.md](./CHANGELOG.md).
+
+### August 2026: Feast Schedule Corrections and Hero CTA Label
+- **Novena organizing zones** for August 19, 20 and 21 given the "Zones" suffix, so all six novena days read consistently
+- **Celebrant details corrected**: Rev. Fr. Daya Darshana listed as Rector (not Director) of St. Sebastian's College, Moratuwa; Rev. Fr. Gihan Gunathilaka's affiliation shortened to "National Director, Catholic Family Apostolate"
+- **Thursday weekday mass** corrected from 6:00 AM to 6:30 AM at the Church Convent
+- **Home hero CTA** relabelled from "Learn About Us" to "About the Church"; it still links to `/about`
 
 ### August 2026: Annual Feast 2026 Schedule
 - **New Annual Feast section** on the Mass Schedules page (`#annual-feast`), placed directly below the hero as the most time-sensitive content on the page

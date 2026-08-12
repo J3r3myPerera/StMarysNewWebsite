@@ -8,9 +8,29 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
-## 2026-08-12 - Annual Feast 2026 Schedule (Dinuka Perera)
+## 2026-08-13 - Feast Schedule Corrections and Hero CTA Label (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
+
+### Changed
+
+- **Organizing zones** for the Fourth, Fifth, and Sixth Novenas (August 19, 20, 21) in the
+  `feastSchedule` array of `src/app/mass-schedules/page.tsx` now carry the "Zones" suffix, matching
+  the first three novena days
+- **Vespers Service celebrant** (August 22) corrected: Rev. Fr. Daya Darshana is Rector of
+  St. Sebastian's College, Moratuwa, not Director
+- **Feast Day Mass celebrant** (August 23) affiliation corrected to "National Director, Catholic
+  Family Apostolate", replacing "National Director, National Catholic Family Apostolate Service"
+- **Thursday weekday mass** in `weekdaySchedules` moved from 6:00 AM to 6:30 AM at the Church
+  Convent
+- **Home hero third CTA** relabelled from "Learn About Us" to "About the Church"
+  (`src/app/page.tsx`); its `/about` destination is unchanged
+
+---
+
+## 2026-08-12 - Annual Feast 2026 Schedule (Dinuka Perera)
+
+_Committed to `feature/churchFeast` as `3cca3c57`. Not yet merged._
 
 ### Added
 
