@@ -5,7 +5,8 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 ## Features
 
 - **Scroll-Aware Navigation**: Transparent nav overlaying the hero on the home page, becoming a frosted-glass white bar on scroll; animated active-link underline indicator
-- **Full-Screen Hero**: Immersive church background image with multi-layer gradient overlay, amber eyebrow label, dual CTAs, and a bouncing scroll indicator
+- **Full-Screen Hero**: Immersive church background image with multi-layer gradient overlay, amber eyebrow label, three CTAs, and a bouncing scroll indicator
+- **Annual Feast Schedule**: Day-by-day feast programme on the Mass Schedules page, deep-linked from the home hero
 - **Two-Column Layout**: Church history and feature cards side by side with hover lift effects
 - **Parish Priest Section**: Glassmorphism card with decorative quote mark, message, and priest photo
 - **Timeline History**: Church history rendered as a visual timeline (1940 → 1981) on the About page
@@ -31,7 +32,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 ## Pages & Sections
 
 1. **Home Page**:
-   - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, dual CTA buttons, and scroll indicator
+   - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, three CTA buttons (View Mass Schedules / Church Feast Schedule / Learn About Us), and scroll indicator
    - Church History: Church history excerpt with animated feature cards (Worship, Invitation, Education)
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
 
@@ -40,6 +41,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Parish priest message in a full-width glassmorphism card
 
 3. **Mass Schedules Page**:
+   - Annual Feast (`#annual-feast`): Day-by-day programme for the parish feast, with standing-info cards (daily Holy Rosary, novena preacher), an 8-card grid covering August 16–23, amber-accented cards for the Vespers Service and Feast Day Mass, and the closing prayer
    - Weekday Schedule: Cards with gradient top strip, large time display, and hover scale on icon
    - Weekend Masses: Cards with Sinhala / English / Bilingual language chips
    - Special Services: Left-bordered cards (Eucharistic Adoration, Holy Days, Praise & Worship, Novenas)
@@ -140,7 +142,8 @@ To add a new event to the gallery:
 - **Parish Priest**: Rev. Fr. Sudath Gunetilleke with personal welcome message
 - **Feature Cards**: Worship, Our Invitation, and Education
 - **Church Zones**: 16 parish zones (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
-- **Mass Schedules**: Weekday, weekend (with language), special services, and important info
+- **Mass Schedules**: Annual feast programme, weekday, weekend (with language), special services, and important info
+- **Annual Feast**: August 16–23 programme, six novenas with organizing zones, themes, readings and offerings, plus the Vespers Service and Feast Day Mass with their celebrants
 - **Contact**: Phone, address, office hours, Facebook, YouTube, and Google Maps
 - **Events Gallery**: May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
 
@@ -161,6 +164,16 @@ For questions about the website or church information:
 - **YouTube**: [St. Mary's Church Maharagama](https://youtube.com/@st.maryschurchmaharagama?si=O9pld9_H5s1-RZO1)
 
 ## Recent Updates
+
+A full, dated history of every change is kept in [CHANGELOG.md](./CHANGELOG.md).
+
+### August 2026: Annual Feast 2026 Schedule
+- **New Annual Feast section** on the Mass Schedules page (`#annual-feast`), placed directly below the hero as the most time-sensitive content on the page
+- **Feast programme data** in a typed `feastSchedule` array at the top of `src/app/mass-schedules/page.tsx`, so future years are a single-place edit
+- **Standing-info cards**: daily Holy Rosary at 6:30 PM, and the novena preacher (Rev. Fr. Ranga Shehan)
+- **Eight day cards** (August 16–23) showing organizing zones, theme, readings, and offerings, with icons mirroring the parish poster's own iconography
+- **Featured styling** for August 22 (Vespers Service) and August 23 (Feast Day Mass): amber accent bar and icon, with the presiding priest / main celebrant in a highlighted panel
+- **"Church Feast Schedule" CTA** added to the home hero, linking to `/mass-schedules#annual-feast`; the section carries `scroll-mt-24` so the heading clears the fixed nav bar on arrival
 
 ### July 2026: May Feast 2026 Albums
 - **May Feast Procession 2026** album: 127 photos added to the Events Gallery
