@@ -8,9 +8,22 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
-## 2026-08-13 - Feast Schedule Corrections and Hero CTA Label (Dinuka Perera)
+## 2026-08-14 - Feast Day Celebrant Name and Title Correction (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
+
+### Changed
+
+- **Feast Day Mass celebrant** (August 23) in the `feastSchedule` array of
+  `src/app/mass-schedules/page.tsx`: surname respelled from "Gunathilaka" to "Goonethilaka", and
+  role corrected from "National Director" to "National Chaplain" of the Catholic Family Apostolate.
+  The entry now reads "Rev. Fr. Gihan Goonethilaka - National Chaplain, Catholic Family Apostolate"
+
+---
+
+## 2026-08-13 - Feast Schedule Corrections and Hero CTA Label (Dinuka Perera)
+
+_Committed as `391fdeb4` and merged via PR #23._
 
 ### Changed
 
