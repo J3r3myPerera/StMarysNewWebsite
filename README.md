@@ -167,9 +167,12 @@ For questions about the website or church information:
 
 A full, dated history of every change is kept in [CHANGELOG.md](./CHANGELOG.md).
 
+### August 2026: Feast Day Celebrant Name and Title Correction
+- **Feast Day Mass celebrant** (August 23) corrected to "Rev. Fr. Gihan Goonethilaka - National Chaplain, Catholic Family Apostolate": surname respelled and role changed from National Director
+
 ### August 2026: Feast Schedule Corrections and Hero CTA Label
 - **Novena organizing zones** for August 19, 20 and 21 given the "Zones" suffix, so all six novena days read consistently
-- **Celebrant details corrected**: Rev. Fr. Daya Darshana listed as Rector (not Director) of St. Sebastian's College, Moratuwa; Rev. Fr. Gihan Gunathilaka's affiliation shortened to "National Director, Catholic Family Apostolate"
+- **Celebrant details corrected**: Rev. Fr. Daya Darshana listed as Rector (not Director) of St. Sebastian's College, Moratuwa; the Feast Day celebrant's affiliation shortened to "Catholic Family Apostolate" (see the entry above for the later name and title correction)
 - **Thursday weekday mass** corrected from 6:00 AM to 6:30 AM at the Church Convent
 - **Home hero CTA** relabelled from "Learn About Us" to "About the Church"; it still links to `/about`
 

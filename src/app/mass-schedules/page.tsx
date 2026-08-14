@@ -116,7 +116,7 @@ const feastSchedule: FeastDay[] = [
     times: [{ time: "8:00 AM" }],
     celebrant: {
       role: "Main Celebrant",
-      name: "Rev. Fr. Gihan Gunathilaka – National Director, Catholic Family Apostolate",
+      name: "Rev. Fr. Gihan Goonethilaka – National Chaplain, Catholic Family Apostolate",
     },
   },
 ];
