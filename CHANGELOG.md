@@ -8,9 +8,35 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
-## 2026-08-14 - Feast Day Celebrant Name and Title Correction (Dinuka Perera)
+## 2026-08-23 - Annual Feast 2026 Removal (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
+
+### Removed
+
+- **Annual Feast section** from the Mass Schedules page (`src/app/mass-schedules/page.tsx`): the
+  whole `#annual-feast` section that sat between the page hero and the Weekday Schedule, including
+  its "August 16 - 23" eyebrow, the standing-info cards for the daily Holy Rosary and the novena
+  preacher, the 8-card programme grid, and the commented-out closing prayer block
+- **Feast programme data** from `src/app/mass-schedules/page.tsx`: the `FeastDay` type and the
+  `feastSchedule` array holding the six novenas, the Vespers Service and the Feast Day Mass with
+  their celebrants, themes, readings, organizing zones and offerings
+- **"Church Feast Schedule" CTA** from the home page hero (`src/app/page.tsx`), which linked to
+  `/mass-schedules#annual-feast`. The hero is back to two buttons: "View Mass Schedules" and
+  "About the Church"
+- **Unused `lucide-react` imports** in `src/app/mass-schedules/page.tsx` that only the feast section
+  used: `Flag`, `Flame`, `Church`, `Cross`, `BookOpen`, `Gift`, `Sparkles` and the `LucideIcon` type
+
+The Mass Schedules page now opens on the Weekday Schedule, as it did before the feast. The weekly
+mass times, special services, and important information sections are untouched, as are the May Feast
+2026 photo albums in the Events Gallery and the references to the annual feast in the parish
+history.
+
+---
+
+## 2026-08-14 - Feast Day Celebrant Name and Title Correction (Dinuka Perera)
+
+_Committed as `2df1ef93` and merged via PR #24._
 
 ### Changed
 
@@ -43,7 +69,7 @@ _Committed as `391fdeb4` and merged via PR #23._
 
 ## 2026-08-12 - Annual Feast 2026 Schedule (Dinuka Perera)
 
-_Committed to `feature/churchFeast` as `3cca3c57`. Not yet merged._
+_Committed as `3cca3c57` and merged via PR #22._
 
 ### Added
 

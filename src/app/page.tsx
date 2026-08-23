@@ -54,12 +54,6 @@ export default function Home() {
                 View Mass Schedules
               </Link>
               <Link
-                href="/mass-schedules#annual-feast"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-amber-300/80 text-amber-200 px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-amber-300 hover:text-blue-950 hover:border-amber-300 transition-all duration-200 backdrop-blur-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Church Feast Schedule
-              </Link>
-              <Link
                 href="/about"
                 className="border-2 border-white/70 text-white px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
               >
