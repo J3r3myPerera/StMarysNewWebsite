@@ -8,9 +8,61 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
-## 2026-08-14 - Feast Day Celebrant Name and Title Correction (Dinuka Perera)
+## 2026-08-23 - Blessed Feast Welcome Overlay (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
+
+### Added
+
+- **`FeastGreeting` overlay component** (`src/components/FeastGreeting.tsx`): a full-screen
+  greeting titled "Wish you a Blessed Feast!" that covers the page on a visitor's first arrival at
+  the home page, then fades away on its own after 5 seconds
+- **Feast greeting on the home page** (`src/app/page.tsx`): `<FeastGreeting />` mounted as the first
+  element of the page, so the overlay is scoped to `/` and does not appear on the other pages
+- **Once-per-session behaviour**: the component records a `feastGreetingSeen` flag in
+  `sessionStorage`, so moving around the site and returning to the home page does not replay the
+  greeting. Reads and writes are wrapped in `try`/`catch` so the greeting still shows, and still
+  auto-dismisses, when storage is blocked in private browsing
+- **Early dismissal**: clicking or tapping anywhere on the overlay closes it, as does the Escape
+  key. Page scrolling is locked while the overlay is up and restored when it closes
+- **Subtle animations**, all via `framer-motion` and matching the hero's blue and amber palette: a
+  slow breathing amber glow behind the text on a 4 second loop, seven sparkles drifting upward and
+  fading on staggered loops, two thin gold rules that draw open from the centre, and a staggered
+  fade-and-rise for the parish eyebrow, the gold gradient title, the blessing line and the "Tap
+  anywhere to continue" hint. Sparkle positions are a fixed array rather than randomised, so the
+  server and client render identical markup
+
+---
+
+## 2026-08-23 - Annual Feast 2026 Removal (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Removed
+
+- **Annual Feast section** from the Mass Schedules page (`src/app/mass-schedules/page.tsx`): the
+  whole `#annual-feast` section that sat between the page hero and the Weekday Schedule, including
+  its "August 16 - 23" eyebrow, the standing-info cards for the daily Holy Rosary and the novena
+  preacher, the 8-card programme grid, and the commented-out closing prayer block
+- **Feast programme data** from `src/app/mass-schedules/page.tsx`: the `FeastDay` type and the
+  `feastSchedule` array holding the six novenas, the Vespers Service and the Feast Day Mass with
+  their celebrants, themes, readings, organizing zones and offerings
+- **"Church Feast Schedule" CTA** from the home page hero (`src/app/page.tsx`), which linked to
+  `/mass-schedules#annual-feast`. The hero is back to two buttons: "View Mass Schedules" and
+  "About the Church"
+- **Unused `lucide-react` imports** in `src/app/mass-schedules/page.tsx` that only the feast section
+  used: `Flag`, `Flame`, `Church`, `Cross`, `BookOpen`, `Gift`, `Sparkles` and the `LucideIcon` type
+
+The Mass Schedules page now opens on the Weekday Schedule, as it did before the feast. The weekly
+mass times, special services, and important information sections are untouched, as are the May Feast
+2026 photo albums in the Events Gallery and the references to the annual feast in the parish
+history.
+
+---
+
+## 2026-08-14 - Feast Day Celebrant Name and Title Correction (Dinuka Perera)
+
+_Committed as `2df1ef93` and merged via PR #24._
 
 ### Changed
 
@@ -43,7 +95,7 @@ _Committed as `391fdeb4` and merged via PR #23._
 
 ## 2026-08-12 - Annual Feast 2026 Schedule (Dinuka Perera)
 
-_Committed to `feature/churchFeast` as `3cca3c57`. Not yet merged._
+_Committed as `3cca3c57` and merged via PR #22._
 
 ### Added
 

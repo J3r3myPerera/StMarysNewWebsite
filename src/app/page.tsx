@@ -4,10 +4,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, Users, BookOpen, ChevronDown } from 'lucide-react';
+import FeastGreeting from '@/components/FeastGreeting';
 
 export default function Home() {
   return (
     <div>
+      <FeastGreeting />
+
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white h-screen flex items-center justify-center -mt-20"
         style={{ backgroundImage: "url('/churchMaincomp.jpg')" }}
@@ -52,12 +55,6 @@ export default function Home() {
                 className="bg-amber-400 text-blue-950 px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-amber-300 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 View Mass Schedules
-              </Link>
-              <Link
-                href="/mass-schedules#annual-feast"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 border-2 border-amber-300/80 text-amber-200 px-8 py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:bg-amber-300 hover:text-blue-950 hover:border-amber-300 transition-all duration-200 backdrop-blur-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Church Feast Schedule
               </Link>
               <Link
                 href="/about"
