@@ -8,6 +8,32 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
+## 2026-08-23 - Blessed Feast Welcome Overlay (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Added
+
+- **`FeastGreeting` overlay component** (`src/components/FeastGreeting.tsx`): a full-screen
+  greeting titled "Wish you a Blessed Feast!" that covers the page on a visitor's first arrival at
+  the home page, then fades away on its own after 5 seconds
+- **Feast greeting on the home page** (`src/app/page.tsx`): `<FeastGreeting />` mounted as the first
+  element of the page, so the overlay is scoped to `/` and does not appear on the other pages
+- **Once-per-session behaviour**: the component records a `feastGreetingSeen` flag in
+  `sessionStorage`, so moving around the site and returning to the home page does not replay the
+  greeting. Reads and writes are wrapped in `try`/`catch` so the greeting still shows, and still
+  auto-dismisses, when storage is blocked in private browsing
+- **Early dismissal**: clicking or tapping anywhere on the overlay closes it, as does the Escape
+  key. Page scrolling is locked while the overlay is up and restored when it closes
+- **Subtle animations**, all via `framer-motion` and matching the hero's blue and amber palette: a
+  slow breathing amber glow behind the text on a 4 second loop, seven sparkles drifting upward and
+  fading on staggered loops, two thin gold rules that draw open from the centre, and a staggered
+  fade-and-rise for the parish eyebrow, the gold gradient title, the blessing line and the "Tap
+  anywhere to continue" hint. Sparkle positions are a fixed array rather than randomised, so the
+  server and client render identical markup
+
+---
+
 ## 2026-08-23 - Annual Feast 2026 Removal (Dinuka Perera)
 
 _Not yet committed. Working tree changes._

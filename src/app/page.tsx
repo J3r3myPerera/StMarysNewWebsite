@@ -4,10 +4,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Heart, Users, BookOpen, ChevronDown } from 'lucide-react';
+import FeastGreeting from '@/components/FeastGreeting';
 
 export default function Home() {
   return (
     <div>
+      <FeastGreeting />
+
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white h-screen flex items-center justify-center -mt-20"
         style={{ backgroundImage: "url('/churchMaincomp.jpg')" }}
