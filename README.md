@@ -4,7 +4,6 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 
 ## Features
 
-- **Feast Welcome Overlay**: A "Wish you a Blessed Feast!" greeting that covers the home page on a visitor's first arrival, with a breathing golden glow and drifting sparkles, then fades away after 5 seconds
 - **Scroll-Aware Navigation**: Transparent nav overlaying the hero on the home page, becoming a frosted-glass white bar on scroll; animated active-link underline indicator
 - **Full-Screen Hero**: Immersive church background image with multi-layer gradient overlay, amber eyebrow label, two CTAs, and a bouncing scroll indicator
 - **Two-Column Layout**: Church history and feature cards side by side with hover lift effects
@@ -32,7 +31,6 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
 ## Pages & Sections
 
 1. **Home Page**:
-   - Feast Welcome Overlay: Full-screen "Wish you a Blessed Feast!" greeting shown once per browser session on first arrival, auto-dismissing after 5 seconds (click, tap or Escape closes it early)
    - Hero Section: Full-screen church photo with layered gradient overlay, amber "Our Lady of the Assumption Parish" eyebrow, two CTA buttons (View Mass Schedules / About the Church), and scroll indicator
    - Church History: Church history excerpt with animated feature cards (Worship, Invitation, Education)
    - Parish Priest Message: Glassmorphism dark-blue card with decorative quote mark and priest photo side-by-side
@@ -118,7 +116,6 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 - **Events Gallery Page**: `src/app/events/page.tsx`
 - **Navigation**: `src/components/Navigation.tsx`
 - **Footer**: `src/components/Footer.tsx`
-- **Feast Welcome Overlay**: `src/components/FeastGreeting.tsx`, the home page greeting; the title, blessing line and 5 second duration all live at the top of this file
 - **Shared Nav Links**: `src/lib/nav.ts`, single source of truth for navigation items used by both the nav bar and footer
 - **Global Styles**: `src/app/globals.css`
 - **Images**: Static assets in `public/`
@@ -145,7 +142,6 @@ To add a new event to the gallery:
 - **Church Zones**: 16 parish zones (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
 - **Mass Schedules**: Weekday, weekend (with language), special services, and important info
 - **Contact**: Phone, address, office hours, Facebook, YouTube, and Google Maps
-- **Feast Greeting**: "Wish you a Blessed Feast!" welcome overlay on the home page
 - **Events Gallery**: May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
 
 ## Deployment
@@ -167,6 +163,10 @@ For questions about the website or church information:
 ## Recent Updates
 
 A full, dated history of every change is kept in [CHANGELOG.md](./CHANGELOG.md).
+
+### September 2026: Blessed Feast Welcome Overlay Removal
+- **"Wish you a Blessed Feast!" overlay removed** from the home page now that the festive period is over: `src/components/FeastGreeting.tsx` is deleted and the home page opens directly on the hero again
+- Nothing else on the home page changed; the May Feast 2026 photo albums and the parish history's references to the annual feast are untouched
 
 ### August 2026: Blessed Feast Welcome Overlay
 - **"Wish you a Blessed Feast!" overlay** added to the home page (`src/components/FeastGreeting.tsx`): a full-screen blue and gold greeting that appears on a visitor's first arrival and fades away on its own after 5 seconds
