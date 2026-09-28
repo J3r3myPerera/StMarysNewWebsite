@@ -8,9 +8,25 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
-## 2026-08-23 - Blessed Feast Welcome Overlay (Dinuka Perera)
+## 2026-09-29 - Blessed Feast Welcome Overlay Removal (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
+
+### Removed
+
+- **`FeastGreeting` overlay component** (`src/components/FeastGreeting.tsx`): the full-screen
+  "Wish you a Blessed Feast!" greeting added on 2026-08-23 is deleted now that the festive period is
+  over, along with its `feastGreetingSeen` `sessionStorage` flag, sparkle animation and Escape/tap
+  dismissal handling
+- **Feast greeting on the home page** (`src/app/page.tsx`): the `FeastGreeting` import and the
+  `<FeastGreeting />` element are removed, so the page again opens directly on the hero. The file is
+  now identical to its state before the overlay was added
+
+---
+
+## 2026-08-23 - Blessed Feast Welcome Overlay (Dinuka Perera)
+
+_Committed as `03506c99` and merged via PR #25._
 
 ### Added
 
@@ -36,7 +52,7 @@ _Not yet committed. Working tree changes._
 
 ## 2026-08-23 - Annual Feast 2026 Removal (Dinuka Perera)
 
-_Not yet committed. Working tree changes._
+_Committed as `de87ab99` and merged via PR #25._
 
 ### Removed
 
