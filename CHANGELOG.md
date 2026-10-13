@@ -8,6 +8,20 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
+## 2026-10-13 - Church Feast 2026 Procession Album (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Added
+
+- **Church Feast 2026 - Procession** album: 61 photos from the August 2026 annual feast
+  procession, placed first in the `events` array in `src/app/events/page.tsx` so it leads the
+  Events Gallery, with `DSC_1149.jpg` as the cover
+- Album registered in `img/events/manifest.json` and served from
+  `public/events/churchFeastProcession_2026/`
+
+---
+
 ## 2026-09-29 - Blessed Feast Welcome Overlay Removal (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
