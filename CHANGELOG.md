@@ -8,6 +8,20 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
+## 2026-11-05 - Fr Sanjeewa 25 Years Jubilee Album (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Added
+
+- **25 Years Jubilee Celebration of Fr Sanjeewa** album: 77 photos from the October 2026
+  jubilee celebration, placed first in the `events` array in `src/app/events/page.tsx` so it leads
+  the Events Gallery, with `DSC_3140.jpg` as the cover
+- Album registered in `img/events/manifest.json` and served from
+  `public/events/FrSanjeewaMendisJubileeCelebration/`
+
+---
+
 ## 2026-10-13 - Church Feast 2026 Procession Album (Dinuka Perera)
 
 _Not yet committed. Working tree changes._

@@ -16,6 +16,30 @@ type EventAlbum = {
 
 const events: EventAlbum[] = [
   {
+    folder: 'FrSanjeewaMendisJubileeCelebration',
+    title: '25 Years Jubilee Celebration of Fr Sanjeewa',
+    date: 'October 2026',
+    cover: 'DSC_3140.jpg',
+    images: [
+      'DSC_3065.jpg','DSC_3066.jpg','DSC_3068.jpg','DSC_3069.jpg','DSC_3071.jpg',
+      'DSC_3072.jpg','DSC_3075.jpg','DSC_3076.jpg','DSC_3077.jpg','DSC_3078.jpg',
+      'DSC_3079.jpg','DSC_3080.jpg','DSC_3081.jpg','DSC_3082.jpg','DSC_3084.jpg',
+      'DSC_3085.jpg','DSC_3086.jpg','DSC_3087.jpg','DSC_3088.jpg','DSC_3089.jpg',
+      'DSC_3090.jpg','DSC_3091.jpg','DSC_3092.jpg','DSC_3093.jpg','DSC_3094.jpg',
+      'DSC_3095.jpg','DSC_3096.jpg','DSC_3097.jpg','DSC_3098.jpg','DSC_3099.jpg',
+      'DSC_3100.jpg','DSC_3103.jpg','DSC_3104.jpg','DSC_3105.jpg','DSC_3106.jpg',
+      'DSC_3107.jpg','DSC_3108.jpg','DSC_3109.jpg','DSC_3114.jpg','DSC_3115.jpg',
+      'DSC_3118.jpg','DSC_3119.jpg','DSC_3120.jpg','DSC_3121.jpg','DSC_3122.jpg',
+      'DSC_3123.jpg','DSC_3124.jpg','DSC_3125.jpg','DSC_3128.jpg','DSC_3129.jpg',
+      'DSC_3130.jpg','DSC_3131.jpg','DSC_3133.jpg','DSC_3138.jpg','DSC_3139.jpg',
+      'DSC_3140.jpg','DSC_3141.jpg','DSC_3142.jpg','DSC_3144.jpg','DSC_3147.jpg',
+      'DSC_3158.jpg','DSC_3159.jpg','DSC_3163.jpg','DSC_3164.jpg','DSC_3167.jpg',
+      'DSC_3170.jpg','DSC_3171.jpg','DSC_3172.jpg','DSC_3176.jpg','DSC_3177.jpg',
+      'DSC_3178.jpg','DSC_3179.jpg','DSC_3180.jpg','DSC_3181.jpg','DSC_3182.jpg',
+      'DSC_3186.jpg','DSC_3187.jpg',
+    ],
+  },
+  {
     folder: 'churchFeastProcession_2026',
     title: 'Church Feast Procession 2026',
     date: 'August 2026',
