@@ -51,7 +51,7 @@ A modern, responsive website for St. Mary's Church Maharagama built with Next.js
    - Community Engagement, Pastoral Care, Easy Communication highlight cards
 
 5. **Events Gallery Page** (`/events`):
-   - Six event albums: 25 Years Jubilee Celebration of Fr Sanjeewa (77 photos), Church Feast 2026 - Procession (61 photos), May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), and Holy Saturday 2026 (84 photos)
+   - Seven event albums: 25 Years Jubilee Celebration of Fr Sanjeewa (77 photos), Church Feast 2026 - Procession (61 photos), Church Feast Vespers 2026 (86 photos), May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), and Holy Saturday 2026 (84 photos)
    - Each album shows a cover photo, date, title, and photo count
    - "View All Photos" expands an inline grid (lazy-loaded thumbnails)
    - Clicking any photo opens a full-screen lightbox with prev/next navigation, keyboard arrow keys, and touch/swipe gesture support
@@ -124,7 +124,7 @@ The website uses a deep navy/blue primary palette (`blue-800` to `blue-950`) wit
 - **Background**: `churchMaincomp.jpg`, hero section
 - **Logo & Favicon**: `logo2.png`, navigation, footer, and browser tab icon (`public/logo2.png`, `src/app/icon.png`)
 - **Priest Photo**: `priest-message.jpg`, home and about pages
-- **Event Photos**: `public/events/FrSanjeewaMendisJubileeCelebration/`, `public/events/churchFeastProcession_2026/`, `public/events/mayFeastProcession_2026/`, `public/events/mayFeastMass_2026/`, `public/events/goodFriday_2026/`, and `public/events/holySaturday_2026/`, used on the Events Gallery page
+- **Event Photos**: `public/events/FrSanjeewaMendisJubileeCelebration/`, `public/events/churchFeastProcession_2026/`, `public/events/churchFeastVespers/`, `public/events/mayFeastProcession_2026/`, `public/events/mayFeastMass_2026/`, `public/events/goodFriday_2026/`, and `public/events/holySaturday_2026/`, used on the Events Gallery page
 
 ### Adding New Events
 To add a new event to the gallery:
@@ -142,7 +142,7 @@ To add a new event to the gallery:
 - **Church Zones**: 16 parish zones (Church Garden, Highlevel Road, Temple Road, Dambahena, Pamunuwa, Janatha Mawatha, Pathiragoda, Navinna, Wattegedera, Alhena, Ambagahapura I & II, Ambillawatta, Godigamuwa, Arawwala I & II)
 - **Mass Schedules**: Weekday, weekend (with language), special services, and important info
 - **Contact**: Phone, address, office hours, Facebook, YouTube, and Google Maps
-- **Events Gallery**: 25 Years Jubilee Celebration of Fr Sanjeewa (77 photos), Church Feast 2026 - Procession (61 photos), May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
+- **Events Gallery**: 25 Years Jubilee Celebration of Fr Sanjeewa (77 photos), Church Feast 2026 - Procession (61 photos), Church Feast Vespers 2026 (86 photos), May Feast Procession 2026 (127 photos), May Feast Mass 2026 (71 photos), Good Friday 2026 (35 photos), Holy Saturday 2026 (84 photos)
 
 ## Deployment
 
@@ -163,6 +163,11 @@ For questions about the website or church information:
 ## Recent Updates
 
 A full, dated history of every change is kept in [CHANGELOG.md](./CHANGELOG.md).
+
+### November 2026: Church Feast Vespers 2026 Album
+- **Church Feast Vespers 2026** album: 86 photos from the August 2026 feast vespers added to the Events Gallery, listed right after the Church Feast 2026 procession album
+- Event images sourced from `img/events/churchFeastVespers/`, served via `public/events/churchFeastVespers/`
+- `img/events/manifest.json` updated with the new album entry
 
 ### November 2026: Fr Sanjeewa 25 Years Jubilee Album
 - **25 Years Jubilee Celebration of Fr Sanjeewa** album: 77 photos from the October 2026 celebration added to the Events Gallery, listed first as the most recent album
