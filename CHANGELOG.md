@@ -8,6 +8,21 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
+## 2026-11-05 - Church Feast Vespers 2026 Album (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Added
+
+- **Church Feast Vespers 2026** album: 86 photos from the August 2026 annual feast vespers,
+  placed in the `events` array in `src/app/events/page.tsx` directly after the Church Feast 2026
+  procession album and before the May Feast Procession 2026 album, with `DSC_0882.jpg` (the
+  "Vespers Service 2026" title photo) as the cover
+- Album registered in `img/events/manifest.json` and served from
+  `public/events/churchFeastVespers/`
+
+---
+
 ## 2026-11-05 - Fr Sanjeewa 25 Years Jubilee Album (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
