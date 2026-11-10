@@ -8,6 +8,20 @@ all changes were authored by Dinuka Perera and merged by Jeremy Perera.
 
 ---
 
+## 2026-11-10 - Church Feast Holy Mass 2026 Album (Dinuka Perera)
+
+_Not yet committed. Working tree changes._
+
+### Added
+
+- **Church Feast Holy Mass 2026** album: 67 photos from the August 2026 annual feast Mass,
+  placed in the `events` array in `src/app/events/page.tsx` between the Church Feast Procession
+  2026 album and the Church Feast Vespers 2026 album, with `DSC_1028.jpg` as the cover
+- Album registered in `img/events/manifest.json` at the same position (date `2026-08`) and served
+  from `public/events/churchFeast_2026/`
+
+---
+
 ## 2026-11-05 - Church Feast Vespers 2026 Album (Dinuka Perera)
 
 _Not yet committed. Working tree changes._
